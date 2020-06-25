@@ -14,232 +14,224 @@ public class Devoir {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long Id_D;
-	private String Code_D;
-	private String Code_Nu;
-	private Date Date_D;
-	private String Session_D;
-	private String Type_D;
-	private String Coef_D;
+	private Long idD;
+	private String codeD;
+	private String codeNu;
+	private Date dateD;
+	private String sessionD;
+	private String typeD;
+	private String coefD;
 	//IsRemi_D` tinyint(1) DEFAULT '0',
-	private Date DateRemise_D;
-	@JoinColumn(name="Code_Mo")
-	@ManyToOne
-	private String Code_Mo;
-	private String Matricule_Pr;
-	private String NbHeure_D;
-	private String HeureDebut_D;
-	private String Periode_D;
+	private Date dateRemiseD;
+	//@JoinColumn(name="Code_Mo")
+	//@ManyToOne
+	private String codeMo;
+	private String matriculePr;
+	private String nbHeureD;
+	private String heureDebutD;
+	private String periodeD;
 	//Choix_D` tinyint(1) DEFAULT '0',
 	//IsAccepter_D` tinyint(1) DEFAULT '0',
-	private Date DateAccepter_D;
-	private String Code_UAccepter_D;
+	private Date dateAccepterD;
+	private String codeUAccepterD;
 	//IsValider_D` tinyint(1) DEFAULT '0',
-	private Date DateValider_D;
-	private String Code_UValider_D;
-	private Date DateAnnuler_D;
-	private String Code_UAnnuler_D;
-	private Date DateCreation;
-	private String Code_UCrea;
-	private Date DateMAJ;
-	private String Code_UMAJ;
+	private Date dateValiderD;
+	private String codeUValiderD;
+	private Date dateAnnulerD;
+	private String codeUAnnulerD;
+	private Date dateCreation;
+	private String codeUCrea;
+	private Date dateMAJ;
+	private String codeUMAJ;
 	//IsSuppr` tinyint(1) DEFAULT '0',
-	private Date DateSuppr;
-	private String Code_USuppr;
-	public Long getId_D() {
-		return Id_D;
+	private Date dateSuppr;
+	public Long getIdD() {
+		return idD;
 	}
-	public void setId_D(Long id_D) {
-		Id_D = id_D;
+	public void setIdD(Long idD) {
+		this.idD = idD;
 	}
-	public String getCode_D() {
-		return Code_D;
+	public String getCodeD() {
+		return codeD;
 	}
-	public void setCode_D(String code_D) {
-		Code_D = code_D;
+	public void setCodeD(String codeD) {
+		this.codeD = codeD;
 	}
-	public String getCode_Nu() {
-		return Code_Nu;
+	public String getCodeNu() {
+		return codeNu;
 	}
-	public void setCode_Nu(String code_Nu) {
-		Code_Nu = code_Nu;
+	public void setCodeNu(String codeNu) {
+		this.codeNu = codeNu;
 	}
-	public Date getDate_D() {
-		return Date_D;
+	public Date getDateD() {
+		return dateD;
 	}
-	public void setDate_D(Date date_D) {
-		Date_D = date_D;
+	public void setDateD(Date dateD) {
+		this.dateD = dateD;
 	}
-	public String getSession_D() {
-		return Session_D;
+	public String getSessionD() {
+		return sessionD;
 	}
-	public void setSession_D(String session_D) {
-		Session_D = session_D;
+	public void setSessionD(String sessionD) {
+		this.sessionD = sessionD;
 	}
-	public String getType_D() {
-		return Type_D;
+	public String getTypeD() {
+		return typeD;
 	}
-	public void setType_D(String type_D) {
-		Type_D = type_D;
+	public void setTypeD(String typeD) {
+		this.typeD = typeD;
 	}
-	public String getCoef_D() {
-		return Coef_D;
+	public String getCoefD() {
+		return coefD;
 	}
-	public void setCoef_D(String coef_D) {
-		Coef_D = coef_D;
+	public void setCoefD(String coefD) {
+		this.coefD = coefD;
 	}
-	public Date getDateRemise_D() {
-		return DateRemise_D;
+	public Date getDateRemiseD() {
+		return dateRemiseD;
 	}
-	public void setDateRemise_D(Date dateRemise_D) {
-		DateRemise_D = dateRemise_D;
+	public void setDateRemiseD(Date dateRemiseD) {
+		this.dateRemiseD = dateRemiseD;
 	}
-	public String getCode_Mo() {
-		return Code_Mo;
+	public String getCodeMo() {
+		return codeMo;
 	}
-	public void setCode_Mo(String code_Mo) {
-		Code_Mo = code_Mo;
+	public void setCodeMo(String codeMo) {
+		this.codeMo = codeMo;
 	}
-	public String getMatricule_Pr() {
-		return Matricule_Pr;
+	public String getMatriculePr() {
+		return matriculePr;
 	}
-	public void setMatricule_Pr(String matricule_Pr) {
-		Matricule_Pr = matricule_Pr;
+	public void setMatriculePr(String matriculePr) {
+		this.matriculePr = matriculePr;
 	}
-	public String getNbHeure_D() {
-		return NbHeure_D;
+	public String getNbHeureD() {
+		return nbHeureD;
 	}
-	public void setNbHeure_D(String nbHeure_D) {
-		NbHeure_D = nbHeure_D;
+	public void setNbHeureD(String nbHeureD) {
+		this.nbHeureD = nbHeureD;
 	}
-	public String getHeureDebut_D() {
-		return HeureDebut_D;
+	public String getHeureDebutD() {
+		return heureDebutD;
 	}
-	public void setHeureDebut_D(String heureDebut_D) {
-		HeureDebut_D = heureDebut_D;
+	public void setHeureDebutD(String heureDebutD) {
+		this.heureDebutD = heureDebutD;
 	}
-	public String getPeriode_D() {
-		return Periode_D;
+	public String getPeriodeD() {
+		return periodeD;
 	}
-	public void setPeriode_D(String periode_D) {
-		Periode_D = periode_D;
+	public void setPeriodeD(String periodeD) {
+		this.periodeD = periodeD;
 	}
-	public Date getDateAccepter_D() {
-		return DateAccepter_D;
+	public Date getDateAccepterD() {
+		return dateAccepterD;
 	}
-	public void setDateAccepter_D(Date dateAccepter_D) {
-		DateAccepter_D = dateAccepter_D;
+	public void setDateAccepterD(Date dateAccepterD) {
+		this.dateAccepterD = dateAccepterD;
 	}
-	public String getCode_UAccepter_D() {
-		return Code_UAccepter_D;
+	public String getCodeUAccepterD() {
+		return codeUAccepterD;
 	}
-	public void setCode_UAccepter_D(String code_UAccepter_D) {
-		Code_UAccepter_D = code_UAccepter_D;
+	public void setCodeUAccepterD(String codeUAccepterD) {
+		this.codeUAccepterD = codeUAccepterD;
 	}
-	public Date getDateValider_D() {
-		return DateValider_D;
+	public Date getDateValiderD() {
+		return dateValiderD;
 	}
-	public void setDateValider_D(Date dateValider_D) {
-		DateValider_D = dateValider_D;
+	public void setDateValiderD(Date dateValiderD) {
+		this.dateValiderD = dateValiderD;
 	}
-	public String getCode_UValider_D() {
-		return Code_UValider_D;
+	public String getCodeUValiderD() {
+		return codeUValiderD;
 	}
-	public void setCode_UValider_D(String code_UValider_D) {
-		Code_UValider_D = code_UValider_D;
+	public void setCodeUValiderD(String codeUValiderD) {
+		this.codeUValiderD = codeUValiderD;
 	}
-	public Date getDateAnnuler_D() {
-		return DateAnnuler_D;
+	public Date getDateAnnulerD() {
+		return dateAnnulerD;
 	}
-	public void setDateAnnuler_D(Date dateAnnuler_D) {
-		DateAnnuler_D = dateAnnuler_D;
+	public void setDateAnnulerD(Date dateAnnulerD) {
+		this.dateAnnulerD = dateAnnulerD;
 	}
-	public String getCode_UAnnuler_D() {
-		return Code_UAnnuler_D;
+	public String getCodeUAnnulerD() {
+		return codeUAnnulerD;
 	}
-	public void setCode_UAnnuler_D(String code_UAnnuler_D) {
-		Code_UAnnuler_D = code_UAnnuler_D;
+	public void setCodeUAnnulerD(String codeUAnnulerD) {
+		this.codeUAnnulerD = codeUAnnulerD;
 	}
 	public Date getDateCreation() {
-		return DateCreation;
+		return dateCreation;
 	}
 	public void setDateCreation(Date dateCreation) {
-		DateCreation = dateCreation;
+		this.dateCreation = dateCreation;
 	}
-	public String getCode_UCrea() {
-		return Code_UCrea;
+	public String getCodeUCrea() {
+		return codeUCrea;
 	}
-	public void setCode_UCrea(String code_UCrea) {
-		Code_UCrea = code_UCrea;
+	public void setCodeUCrea(String codeUCrea) {
+		this.codeUCrea = codeUCrea;
 	}
 	public Date getDateMAJ() {
-		return DateMAJ;
+		return dateMAJ;
 	}
 	public void setDateMAJ(Date dateMAJ) {
-		DateMAJ = dateMAJ;
+		this.dateMAJ = dateMAJ;
 	}
-	public String getCode_UMAJ() {
-		return Code_UMAJ;
+	public String getCodeUMAJ() {
+		return codeUMAJ;
 	}
-	public void setCode_UMAJ(String code_UMAJ) {
-		Code_UMAJ = code_UMAJ;
+	public void setCodeUMAJ(String codeUMAJ) {
+		this.codeUMAJ = codeUMAJ;
 	}
 	public Date getDateSuppr() {
-		return DateSuppr;
+		return dateSuppr;
 	}
 	public void setDateSuppr(Date dateSuppr) {
-		DateSuppr = dateSuppr;
+		this.dateSuppr = dateSuppr;
 	}
-	public String getCode_USuppr() {
-		return Code_USuppr;
-	}
-	public void setCode_USuppr(String code_USuppr) {
-		Code_USuppr = code_USuppr;
-	}
-	
-	public Devoir(Long id_D, String code_D, String code_Nu, Date date_D, String session_D, String type_D, String coef_D,
-			Date dateRemise_D, String code_Mo, String matricule_Pr, String nbHeure_D, String heureDebut_D,
-			String periode_D, Date dateAccepter_D, String code_UAccepter_D, Date dateValider_D, String code_UValider_D,
-			Date dateAnnuler_D, String code_UAnnuler_D, Date dateCreation, String code_UCrea, Date dateMAJ,
-			String code_UMAJ, Date dateSuppr, String code_USuppr) {
+	public Devoir() {
 		super();
-		Id_D = id_D;
-		Code_D = code_D;
-		Code_Nu = code_Nu;
-		Date_D = date_D;
-		Session_D = session_D;
-		Type_D = type_D;
-		Coef_D = coef_D;
-		DateRemise_D = dateRemise_D;
-		Code_Mo = code_Mo;
-		Matricule_Pr = matricule_Pr;
-		NbHeure_D = nbHeure_D;
-		HeureDebut_D = heureDebut_D;
-		Periode_D = periode_D;
-		DateAccepter_D = dateAccepter_D;
-		Code_UAccepter_D = code_UAccepter_D;
-		DateValider_D = dateValider_D;
-		Code_UValider_D = code_UValider_D;
-		DateAnnuler_D = dateAnnuler_D;
-		Code_UAnnuler_D = code_UAnnuler_D;
-		DateCreation = dateCreation;
-		Code_UCrea = code_UCrea;
-		DateMAJ = dateMAJ;
-		Code_UMAJ = code_UMAJ;
-		DateSuppr = dateSuppr;
-		Code_USuppr = code_USuppr;
+		// TODO Auto-generated constructor stub
 	}
-	
+	public Devoir(Long idD, String codeD, String codeNu, Date dateD, String sessionD, String typeD, String coefD,
+			Date dateRemiseD, String codeMo, String matriculePr, String nbHeureD, String heureDebutD, String periodeD,
+			Date dateAccepterD, String codeUAccepterD, Date dateValiderD, String codeUValiderD, Date dateAnnulerD,
+			String codeUAnnulerD, Date dateCreation, String codeUCrea, Date dateMAJ, String codeUMAJ, Date dateSuppr) {
+		super();
+		this.idD = idD;
+		this.codeD = codeD;
+		this.codeNu = codeNu;
+		this.dateD = dateD;
+		this.sessionD = sessionD;
+		this.typeD = typeD;
+		this.coefD = coefD;
+		this.dateRemiseD = dateRemiseD;
+		this.codeMo = codeMo;
+		this.matriculePr = matriculePr;
+		this.nbHeureD = nbHeureD;
+		this.heureDebutD = heureDebutD;
+		this.periodeD = periodeD;
+		this.dateAccepterD = dateAccepterD;
+		this.codeUAccepterD = codeUAccepterD;
+		this.dateValiderD = dateValiderD;
+		this.codeUValiderD = codeUValiderD;
+		this.dateAnnulerD = dateAnnulerD;
+		this.codeUAnnulerD = codeUAnnulerD;
+		this.dateCreation = dateCreation;
+		this.codeUCrea = codeUCrea;
+		this.dateMAJ = dateMAJ;
+		this.codeUMAJ = codeUMAJ;
+		this.dateSuppr = dateSuppr;
+	}
 	@Override
 	public String toString() {
-		return "Devoir [Id_D=" + Id_D + ", Code_D=" + Code_D + ", Code_Nu=" + Code_Nu + ", Date_D=" + Date_D
-				+ ", Session_D=" + Session_D + ", Type_D=" + Type_D + ", Coef_D=" + Coef_D + ", DateRemise_D="
-				+ DateRemise_D + ", Code_Mo=" + Code_Mo + ", Matricule_Pr=" + Matricule_Pr + ", NbHeure_D=" + NbHeure_D
-				+ ", HeureDebut_D=" + HeureDebut_D + ", Periode_D=" + Periode_D + ", DateAccepter_D=" + DateAccepter_D
-				+ ", Code_UAccepter_D=" + Code_UAccepter_D + ", DateValider_D=" + DateValider_D + ", Code_UValider_D="
-				+ Code_UValider_D + ", DateAnnuler_D=" + DateAnnuler_D + ", Code_UAnnuler_D=" + Code_UAnnuler_D
-				+ ", DateCreation=" + DateCreation + ", Code_UCrea=" + Code_UCrea + ", DateMAJ=" + DateMAJ
-				+ ", Code_UMAJ=" + Code_UMAJ + ", DateSuppr=" + DateSuppr + ", Code_USuppr=" + Code_USuppr + "]";
+		return "Devoir [idD=" + idD + ", codeD=" + codeD + ", codeNu=" + codeNu + ", dateD=" + dateD + ", sessionD="
+				+ sessionD + ", typeD=" + typeD + ", coefD=" + coefD + ", dateRemiseD=" + dateRemiseD + ", codeMo="
+				+ codeMo + ", matriculePr=" + matriculePr + ", nbHeureD=" + nbHeureD + ", heureDebutD=" + heureDebutD
+				+ ", periodeD=" + periodeD + ", dateAccepterD=" + dateAccepterD + ", codeUAccepterD=" + codeUAccepterD
+				+ ", dateValiderD=" + dateValiderD + ", codeUValiderD=" + codeUValiderD + ", dateAnnulerD="
+				+ dateAnnulerD + ", codeUAnnulerD=" + codeUAnnulerD + ", dateCreation=" + dateCreation + ", codeUCrea="
+				+ codeUCrea + ", dateMAJ=" + dateMAJ + ", codeUMAJ=" + codeUMAJ + ", dateSuppr=" + dateSuppr + "]";
 	}
 	
 	

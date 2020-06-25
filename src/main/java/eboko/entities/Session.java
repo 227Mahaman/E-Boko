@@ -14,59 +14,63 @@ public class Session {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long Id_Ses;
-	private String Code_Ses;
-	private Date Debut_Ses;
-	private Date Fin_Ses;
-	@JoinColumn(name="Code_U")
-	@ManyToOne
-	private String Code_U;
-	public Long getId_Ses() {
-		return Id_Ses;
+	private Long idSes;
+	private String codeSes;
+	private Date debutSes;
+	private Date finSes;
+	//@JoinColumn(name="Code_U")
+	//@ManyToOne
+	private String codeU;
+	public Long getIdSes() {
+		return idSes;
 	}
-	public void setId_Ses(Long id_Ses) {
-		Id_Ses = id_Ses;
+	public void setIdSes(Long idSes) {
+		this.idSes = idSes;
 	}
-	public String getCode_Ses() {
-		return Code_Ses;
+	public String getCodeSes() {
+		return codeSes;
 	}
-	public void setCode_Ses(String code_Ses) {
-		Code_Ses = code_Ses;
+	public void setCodeSes(String codeSes) {
+		this.codeSes = codeSes;
 	}
-	public Date getDebut_Ses() {
-		return Debut_Ses;
+	public Date getDebutSes() {
+		return debutSes;
 	}
-	public void setDebut_Ses(Date debut_Ses) {
-		Debut_Ses = debut_Ses;
+	public void setDebutSes(Date debutSes) {
+		this.debutSes = debutSes;
 	}
-	public Date getFin_Ses() {
-		return Fin_Ses;
+	public Date getFinSes() {
+		return finSes;
 	}
-	public void setFin_Ses(Date fin_Ses) {
-		Fin_Ses = fin_Ses;
+	public void setFinSes(Date finSes) {
+		this.finSes = finSes;
 	}
-	public String getCode_U() {
-		return Code_U;
+	public String getCodeU() {
+		return codeU;
 	}
-	public void setCode_U(String code_U) {
-		Code_U = code_U;
+	public void setCodeU(String codeU) {
+		this.codeU = codeU;
 	}
+	
+	
 	public Session() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Session(Long id_Ses, String code_Ses, Date debut_Ses, Date fin_Ses, String code_U) {
+	
+	public Session(Long idSes, String codeSes, Date debutSes, Date finSes, String codeU) {
 		super();
-		Id_Ses = id_Ses;
-		Code_Ses = code_Ses;
-		Debut_Ses = debut_Ses;
-		Fin_Ses = fin_Ses;
-		Code_U = code_U;
+		this.idSes = idSes;
+		this.codeSes = codeSes;
+		this.debutSes = debutSes;
+		this.finSes = finSes;
+		this.codeU = codeU;
 	}
 	@Override
 	public String toString() {
-		return "Session [Id_Ses=" + Id_Ses + ", Code_Ses=" + Code_Ses + ", Debut_Ses=" + Debut_Ses + ", Fin_Ses="
-				+ Fin_Ses + ", Code_U=" + Code_U + "]";
+		return "Session [idSes=" + idSes + ", codeSes=" + codeSes + ", debutSes=" + debutSes + ", finSes=" + finSes
+				+ ", codeU=" + codeU + "]";
 	}
+	
 	
 }

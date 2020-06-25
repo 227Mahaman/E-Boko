@@ -12,225 +12,224 @@ public class Etudiant {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long Id_E;
-	private String Matricule_E;
-	private String Nom_E;
-	private String Prenom_E;
-	private Date DateN_E;
-	private String LieuN_E;
-	private String AdressePerso_E;
-	private String AdressePro_E;
-	private String Email_E;
-	private String Sex_E;
-	private String Nationalite_E;
-	private String Mobile_E;
-	private String NomSC_E;
-	private String TelSC_E;
-	private String FonctionSC_E;
-	private String ServiceSC_E;
+	private Long idE;
+	private String matriculeE;
+	private String nomE;
+	private String prenomE;
+	private Date dateNE;
+	private String lieuNE;
+	private String adressePersoE;
+	private String adresseProE;
+	private String emailE;
+	private String sexE;
+	private String nationaliteE;
+	private String mobileE;
+	private String nomSCE;
+	private String telSCE;
+	private String fonctionSCE;
+	private String serviceSCE;
 	//IsCarted_E tinyint(1) DEFAULT '0';
 	//IsCaptured_E tinyint(1) DEFAULT '0';
 	//Choix_E tinyint(1) DEFAULT '0'
-	private Date DateCreation;
-	private String Code_UCrea;
-	private Date DateMAJ;
-	private String Code_UMAJ;
+	private Date dateCreation;
+	private String codeUCrea;
+	private Date dateMAJ;
+	private String codeUMAJ;
 	//IsSuppr` tinyint(1) DEFAULT '0',
-	private Date DateSuppr;
-	private String Code_USuppr;
-	private String MatriculePerso_E;
+	private Date dateSuppr;
+	private String codeUSuppr;
+	private String matriculePersoE;
 	//Photo_E varchar(100) DEFAULT NULL,
-	private String Dossier_E;
-	public Long getId_E() {
-		return Id_E;
+	private String dossierE;
+	public Long getIdE() {
+		return idE;
 	}
-	public void setId_E(Long id_E) {
-		Id_E = id_E;
+	public void setIdE(Long idE) {
+		this.idE = idE;
 	}
-	public String getMatricule_E() {
-		return Matricule_E;
+	public String getMatriculeE() {
+		return matriculeE;
 	}
-	public void setMatricule_E(String matricule_E) {
-		Matricule_E = matricule_E;
+	public void setMatriculeE(String matriculeE) {
+		this.matriculeE = matriculeE;
 	}
-	public String getNom_E() {
-		return Nom_E;
+	public String getNomE() {
+		return nomE;
 	}
-	public void setNom_E(String nom_E) {
-		Nom_E = nom_E;
+	public void setNomE(String nomE) {
+		this.nomE = nomE;
 	}
-	public String getPrenom_E() {
-		return Prenom_E;
+	public String getPrenomE() {
+		return prenomE;
 	}
-	public void setPrenom_E(String prenom_E) {
-		Prenom_E = prenom_E;
+	public void setPrenomE(String prenomE) {
+		this.prenomE = prenomE;
 	}
-	public Date getDateN_E() {
-		return DateN_E;
+	public Date getDateNE() {
+		return dateNE;
 	}
-	public void setDateN_E(Date dateN_E) {
-		DateN_E = dateN_E;
+	public void setDateNE(Date dateNE) {
+		this.dateNE = dateNE;
 	}
-	public String getLieuN_E() {
-		return LieuN_E;
+	public String getLieuNE() {
+		return lieuNE;
 	}
-	public void setLieuN_E(String lieuN_E) {
-		LieuN_E = lieuN_E;
+	public void setLieuNE(String lieuNE) {
+		this.lieuNE = lieuNE;
 	}
-	public String getAdressePerso_E() {
-		return AdressePerso_E;
+	public String getAdressePersoE() {
+		return adressePersoE;
 	}
-	public void setAdressePerso_E(String adressePerso_E) {
-		AdressePerso_E = adressePerso_E;
+	public void setAdressePersoE(String adressePersoE) {
+		this.adressePersoE = adressePersoE;
 	}
-	public String getAdressePro_E() {
-		return AdressePro_E;
+	public String getAdresseProE() {
+		return adresseProE;
 	}
-	public void setAdressePro_E(String adressePro_E) {
-		AdressePro_E = adressePro_E;
+	public void setAdresseProE(String adresseProE) {
+		this.adresseProE = adresseProE;
 	}
-	public String getEmail_E() {
-		return Email_E;
+	public String getEmailE() {
+		return emailE;
 	}
-	public void setEmail_E(String email_E) {
-		Email_E = email_E;
+	public void setEmailE(String emailE) {
+		this.emailE = emailE;
 	}
-	public String getSex_E() {
-		return Sex_E;
+	public String getSexE() {
+		return sexE;
 	}
-	public void setSex_E(String sex_E) {
-		Sex_E = sex_E;
+	public void setSexE(String sexE) {
+		this.sexE = sexE;
 	}
-	public String getNationalite_E() {
-		return Nationalite_E;
+	public String getNationaliteE() {
+		return nationaliteE;
 	}
-	public void setNationalite_E(String nationalite_E) {
-		Nationalite_E = nationalite_E;
+	public void setNationaliteE(String nationaliteE) {
+		this.nationaliteE = nationaliteE;
 	}
-	public String getMobile_E() {
-		return Mobile_E;
+	public String getMobileE() {
+		return mobileE;
 	}
-	public void setMobile_E(String mobile_E) {
-		Mobile_E = mobile_E;
+	public void setMobileE(String mobileE) {
+		this.mobileE = mobileE;
 	}
-	public String getNomSC_E() {
-		return NomSC_E;
+	public String getNomSCE() {
+		return nomSCE;
 	}
-	public void setNomSC_E(String nomSC_E) {
-		NomSC_E = nomSC_E;
+	public void setNomSCE(String nomSCE) {
+		this.nomSCE = nomSCE;
 	}
-	public String getTelSC_E() {
-		return TelSC_E;
+	public String getTelSCE() {
+		return telSCE;
 	}
-	public void setTelSC_E(String telSC_E) {
-		TelSC_E = telSC_E;
+	public void setTelSCE(String telSCE) {
+		this.telSCE = telSCE;
 	}
-	public String getFonctionSC_E() {
-		return FonctionSC_E;
+	public String getFonctionSCE() {
+		return fonctionSCE;
 	}
-	public void setFonctionSC_E(String fonctionSC_E) {
-		FonctionSC_E = fonctionSC_E;
+	public void setFonctionSCE(String fonctionSCE) {
+		this.fonctionSCE = fonctionSCE;
 	}
-	public String getServiceSC_E() {
-		return ServiceSC_E;
+	public String getServiceSCE() {
+		return serviceSCE;
 	}
-	public void setServiceSC_E(String serviceSC_E) {
-		ServiceSC_E = serviceSC_E;
+	public void setServiceSCE(String serviceSCE) {
+		this.serviceSCE = serviceSCE;
 	}
 	public Date getDateCreation() {
-		return DateCreation;
+		return dateCreation;
 	}
 	public void setDateCreation(Date dateCreation) {
-		DateCreation = dateCreation;
+		this.dateCreation = dateCreation;
 	}
-	public String getCode_UCrea() {
-		return Code_UCrea;
+	public String getCodeUCrea() {
+		return codeUCrea;
 	}
-	public void setCode_UCrea(String code_UCrea) {
-		Code_UCrea = code_UCrea;
+	public void setCodeUCrea(String codeUCrea) {
+		this.codeUCrea = codeUCrea;
 	}
 	public Date getDateMAJ() {
-		return DateMAJ;
+		return dateMAJ;
 	}
 	public void setDateMAJ(Date dateMAJ) {
-		DateMAJ = dateMAJ;
+		this.dateMAJ = dateMAJ;
 	}
-	public String getCode_UMAJ() {
-		return Code_UMAJ;
+	public String getCodeUMAJ() {
+		return codeUMAJ;
 	}
-	public void setCode_UMAJ(String code_UMAJ) {
-		Code_UMAJ = code_UMAJ;
+	public void setCodeUMAJ(String codeUMAJ) {
+		this.codeUMAJ = codeUMAJ;
 	}
 	public Date getDateSuppr() {
-		return DateSuppr;
+		return dateSuppr;
 	}
 	public void setDateSuppr(Date dateSuppr) {
-		DateSuppr = dateSuppr;
+		this.dateSuppr = dateSuppr;
 	}
-	public String getCode_USuppr() {
-		return Code_USuppr;
+	public String getCodeUSuppr() {
+		return codeUSuppr;
 	}
-	public void setCode_USuppr(String code_USuppr) {
-		Code_USuppr = code_USuppr;
+	public void setCodeUSuppr(String codeUSuppr) {
+		this.codeUSuppr = codeUSuppr;
 	}
-	public String getMatriculePerso_E() {
-		return MatriculePerso_E;
+	public String getMatriculePersoE() {
+		return matriculePersoE;
 	}
-	public void setMatriculePerso_E(String matriculePerso_E) {
-		MatriculePerso_E = matriculePerso_E;
+	public void setMatriculePersoE(String matriculePersoE) {
+		this.matriculePersoE = matriculePersoE;
 	}
-	public String getDossier_E() {
-		return Dossier_E;
+	public String getDossierE() {
+		return dossierE;
 	}
-	public void setDossier_E(String dossier_E) {
-		Dossier_E = dossier_E;
+	public void setDossierE(String dossierE) {
+		this.dossierE = dossierE;
 	}
 	public Etudiant() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Etudiant(Long id_E, String matricule_E, String nom_E, String prenom_E, Date dateN_E, String lieuN_E,
-			String adressePerso_E, String adressePro_E, String email_E, String sex_E, String nationalite_E,
-			String mobile_E, String nomSC_E, String telSC_E, String fonctionSC_E, String serviceSC_E, Date dateCreation,
-			String code_UCrea, Date dateMAJ, String code_UMAJ, Date dateSuppr, String code_USuppr,
-			String matriculePerso_E, String dossier_E) {
+	public Etudiant(Long idE, String matriculeE, String nomE, String prenomE, Date dateNE, String lieuNE,
+			String adressePersoE, String adresseProE, String emailE, String sexE, String nationaliteE, String mobileE,
+			String nomSCE, String telSCE, String fonctionSCE, String serviceSCE, Date dateCreation, String codeUCrea,
+			Date dateMAJ, String codeUMAJ, Date dateSuppr, String codeUSuppr, String matriculePersoE, String dossierE) {
 		super();
-		Id_E = id_E;
-		Matricule_E = matricule_E;
-		Nom_E = nom_E;
-		Prenom_E = prenom_E;
-		DateN_E = dateN_E;
-		LieuN_E = lieuN_E;
-		AdressePerso_E = adressePerso_E;
-		AdressePro_E = adressePro_E;
-		Email_E = email_E;
-		Sex_E = sex_E;
-		Nationalite_E = nationalite_E;
-		Mobile_E = mobile_E;
-		NomSC_E = nomSC_E;
-		TelSC_E = telSC_E;
-		FonctionSC_E = fonctionSC_E;
-		ServiceSC_E = serviceSC_E;
-		DateCreation = dateCreation;
-		Code_UCrea = code_UCrea;
-		DateMAJ = dateMAJ;
-		Code_UMAJ = code_UMAJ;
-		DateSuppr = dateSuppr;
-		Code_USuppr = code_USuppr;
-		MatriculePerso_E = matriculePerso_E;
-		Dossier_E = dossier_E;
+		this.idE = idE;
+		this.matriculeE = matriculeE;
+		this.nomE = nomE;
+		this.prenomE = prenomE;
+		this.dateNE = dateNE;
+		this.lieuNE = lieuNE;
+		this.adressePersoE = adressePersoE;
+		this.adresseProE = adresseProE;
+		this.emailE = emailE;
+		this.sexE = sexE;
+		this.nationaliteE = nationaliteE;
+		this.mobileE = mobileE;
+		this.nomSCE = nomSCE;
+		this.telSCE = telSCE;
+		this.fonctionSCE = fonctionSCE;
+		this.serviceSCE = serviceSCE;
+		this.dateCreation = dateCreation;
+		this.codeUCrea = codeUCrea;
+		this.dateMAJ = dateMAJ;
+		this.codeUMAJ = codeUMAJ;
+		this.dateSuppr = dateSuppr;
+		this.codeUSuppr = codeUSuppr;
+		this.matriculePersoE = matriculePersoE;
+		this.dossierE = dossierE;
 	}
+	
 	@Override
 	public String toString() {
-		return "Etudiant [Id_E=" + Id_E + ", Matricule_E=" + Matricule_E + ", Nom_E=" + Nom_E + ", Prenom_E=" + Prenom_E
-				+ ", DateN_E=" + DateN_E + ", LieuN_E=" + LieuN_E + ", AdressePerso_E=" + AdressePerso_E
-				+ ", AdressePro_E=" + AdressePro_E + ", Email_E=" + Email_E + ", Sex_E=" + Sex_E + ", Nationalite_E="
-				+ Nationalite_E + ", Mobile_E=" + Mobile_E + ", NomSC_E=" + NomSC_E + ", TelSC_E=" + TelSC_E
-				+ ", FonctionSC_E=" + FonctionSC_E + ", ServiceSC_E=" + ServiceSC_E + ", DateCreation=" + DateCreation
-				+ ", Code_UCrea=" + Code_UCrea + ", DateMAJ=" + DateMAJ + ", Code_UMAJ=" + Code_UMAJ + ", DateSuppr="
-				+ DateSuppr + ", Code_USuppr=" + Code_USuppr + ", MatriculePerso_E=" + MatriculePerso_E + ", Dossier_E="
-				+ Dossier_E + "]";
+		return "Etudiant [idE=" + idE + ", matriculeE=" + matriculeE + ", nomE=" + nomE + ", prenomE=" + prenomE
+				+ ", dateNE=" + dateNE + ", lieuNE=" + lieuNE + ", adressePersoE=" + adressePersoE + ", adresseProE="
+				+ adresseProE + ", emailE=" + emailE + ", sexE=" + sexE + ", nationaliteE=" + nationaliteE
+				+ ", mobileE=" + mobileE + ", nomSCE=" + nomSCE + ", telSCE=" + telSCE + ", fonctionSCE=" + fonctionSCE
+				+ ", serviceSCE=" + serviceSCE + ", dateCreation=" + dateCreation + ", codeUCrea=" + codeUCrea
+				+ ", dateMAJ=" + dateMAJ + ", codeUMAJ=" + codeUMAJ + ", dateSuppr=" + dateSuppr + ", codeUSuppr="
+				+ codeUSuppr + ", matriculePersoE=" + matriculePersoE + ", dossierE=" + dossierE + "]";
 	}
-
+		
 	
 }

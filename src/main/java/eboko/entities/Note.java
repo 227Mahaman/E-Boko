@@ -14,115 +14,116 @@ public class Note {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long Id_No;
-	private String Code_No;
-	private String Valeur_No;
-	@JoinColumn(name="Code_D")
-	@ManyToOne
-	private String Code_D;
-	@JoinColumn(name="Matricule_E")
-	@ManyToOne
-	private String Matricule_E;
+	private Long idNo;
+	private String codeNo;
+	private String valeurNo;
+	//@JoinColumn(name="Code_D")
+	//@ManyToOne
+	private String codeD;
+	//@JoinColumn(name="Matricule_E")
+	//@ManyToOne
+	private String matriculeE;
 	//Choix_No` tinyint(1) DEFAULT '0',
-	private Date DateCreation;
-	private String Code_UCrea;
-	private Date DateMAJ;
-	private String Code_UMAJ;
+	private Date dateCreation;
+	private String codeUCrea;
+	private Date dateMAJ;
+	private String codeUMAJ;
 	//IsSuppr` tinyint(1) DEFAULT '0',
-	private Date DateSuppr;
-	private String Code_USuppr;
-	public Long getId_No() {
-		return Id_No;
+	private Date dateSuppr;
+	private String codeUSuppr;
+	public Long getIdNo() {
+		return idNo;
 	}
-	public void setId_No(Long id_No) {
-		Id_No = id_No;
+	public void setIdNo(Long idNo) {
+		this.idNo = idNo;
 	}
-	public String getCode_No() {
-		return Code_No;
+	public String getCodeNo() {
+		return codeNo;
 	}
-	public void setCode_No(String code_No) {
-		Code_No = code_No;
+	public void setCodeNo(String codeNo) {
+		this.codeNo = codeNo;
 	}
-	public String getValeur_No() {
-		return Valeur_No;
+	public String getValeurNo() {
+		return valeurNo;
 	}
-	public void setValeur_No(String valeur_No) {
-		Valeur_No = valeur_No;
+	public void setValeurNo(String valeurNo) {
+		this.valeurNo = valeurNo;
 	}
-	public String getCode_D() {
-		return Code_D;
+	public String getCodeD() {
+		return codeD;
 	}
-	public void setCode_D(String code_D) {
-		Code_D = code_D;
+	public void setCodeD(String codeD) {
+		this.codeD = codeD;
 	}
-	public String getMatricule_E() {
-		return Matricule_E;
+	public String getMatriculeE() {
+		return matriculeE;
 	}
-	public void setMatricule_E(String matricule_E) {
-		Matricule_E = matricule_E;
+	public void setMatriculeE(String matriculeE) {
+		this.matriculeE = matriculeE;
 	}
 	public Date getDateCreation() {
-		return DateCreation;
+		return dateCreation;
 	}
 	public void setDateCreation(Date dateCreation) {
-		DateCreation = dateCreation;
+		this.dateCreation = dateCreation;
 	}
-	public String getCode_UCrea() {
-		return Code_UCrea;
+	public String getCodeUCrea() {
+		return codeUCrea;
 	}
-	public void setCode_UCrea(String code_UCrea) {
-		Code_UCrea = code_UCrea;
+	public void setCodeUCrea(String codeUCrea) {
+		this.codeUCrea = codeUCrea;
 	}
 	public Date getDateMAJ() {
-		return DateMAJ;
+		return dateMAJ;
 	}
 	public void setDateMAJ(Date dateMAJ) {
-		DateMAJ = dateMAJ;
+		this.dateMAJ = dateMAJ;
 	}
-	public String getCode_UMAJ() {
-		return Code_UMAJ;
+	public String getCodeUMAJ() {
+		return codeUMAJ;
 	}
-	public void setCode_UMAJ(String code_UMAJ) {
-		Code_UMAJ = code_UMAJ;
+	public void setCodeUMAJ(String codeUMAJ) {
+		this.codeUMAJ = codeUMAJ;
 	}
 	public Date getDateSuppr() {
-		return DateSuppr;
+		return dateSuppr;
 	}
 	public void setDateSuppr(Date dateSuppr) {
-		DateSuppr = dateSuppr;
+		this.dateSuppr = dateSuppr;
 	}
-	public String getCode_USuppr() {
-		return Code_USuppr;
+	public String getCodeUSuppr() {
+		return codeUSuppr;
 	}
-	public void setCode_USuppr(String code_USuppr) {
-		Code_USuppr = code_USuppr;
+	public void setCodeUSuppr(String codeUSuppr) {
+		this.codeUSuppr = codeUSuppr;
 	}
 	public Note() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Note(Long id_No, String code_No, String valeur_No, String code_D, String matricule_E, Date dateCreation,
-			String code_UCrea, Date dateMAJ, String code_UMAJ, Date dateSuppr, String code_USuppr) {
+	public Note(Long idNo, String codeNo, String valeurNo, String codeD, String matriculeE, Date dateCreation,
+			String codeUCrea, Date dateMAJ, String codeUMAJ, Date dateSuppr, String codeUSuppr) {
 		super();
-		Id_No = id_No;
-		Code_No = code_No;
-		Valeur_No = valeur_No;
-		Code_D = code_D;
-		Matricule_E = matricule_E;
-		DateCreation = dateCreation;
-		Code_UCrea = code_UCrea;
-		DateMAJ = dateMAJ;
-		Code_UMAJ = code_UMAJ;
-		DateSuppr = dateSuppr;
-		Code_USuppr = code_USuppr;
+		this.idNo = idNo;
+		this.codeNo = codeNo;
+		this.valeurNo = valeurNo;
+		this.codeD = codeD;
+		this.matriculeE = matriculeE;
+		this.dateCreation = dateCreation;
+		this.codeUCrea = codeUCrea;
+		this.dateMAJ = dateMAJ;
+		this.codeUMAJ = codeUMAJ;
+		this.dateSuppr = dateSuppr;
+		this.codeUSuppr = codeUSuppr;
 	}
 	@Override
 	public String toString() {
-		return "Note [Id_No=" + Id_No + ", Code_No=" + Code_No + ", Valeur_No=" + Valeur_No + ", Code_D=" + Code_D
-				+ ", Matricule_E=" + Matricule_E + ", DateCreation=" + DateCreation + ", Code_UCrea=" + Code_UCrea
-				+ ", DateMAJ=" + DateMAJ + ", Code_UMAJ=" + Code_UMAJ + ", DateSuppr=" + DateSuppr + ", Code_USuppr="
-				+ Code_USuppr + "]";
+		return "Note [idNo=" + idNo + ", codeNo=" + codeNo + ", valeurNo=" + valeurNo + ", codeD=" + codeD
+				+ ", matriculeE=" + matriculeE + ", dateCreation=" + dateCreation + ", codeUCrea=" + codeUCrea
+				+ ", dateMAJ=" + dateMAJ + ", codeUMAJ=" + codeUMAJ + ", dateSuppr=" + dateSuppr + ", codeUSuppr="
+				+ codeUSuppr + "]";
 	}
-
+	
+	
 	
 }

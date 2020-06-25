@@ -1,5 +1,6 @@
 package eboko.entities;
 
+import java.io.Serializable;
 import java.sql.Date;
 
 import javax.persistence.Entity;
@@ -8,108 +9,105 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Ue {
+public class Ue implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long Id_UE;
-	private String Code_UE;
-	private String Intitule_UE;
+	private Long idUe;
+	private String codeUe;
+	private String intitule;
 	//Choix_UE` tinyint(1) DEFAULT '0',
-	private Date DateCreation;
-	private String Code_UCrea;
-	private Date DateMAJ;
-	private String Code_UMAJ;
+	private Date dateCreation;
+	private String codeUCrea;
+	private Date dateMAJ;
+	private String codeUMAJ;
 	//IsSuppr` tinyint(1) DEFAULT '0',
-	private Date DateSuppr;
-	private String Code_USuppr;
-	private String CodePerso_UE;
-	public Long getId_UE() {
-		return Id_UE;
+	private Date dateSuppr;
+	private String codeUSuppr;
+	private String codePersoUE;
+	public Long getIdUe() {
+		return idUe;
 	}
-	public void setId_UE(Long id_UE) {
-		Id_UE = id_UE;
+	public void setIdUe(Long idUe) {
+		this.idUe = idUe;
 	}
-	public String getCode_UE() {
-		return Code_UE;
+	public String getCodeUe() {
+		return codeUe;
 	}
-	public void setCode_UE(String code_UE) {
-		Code_UE = code_UE;
+	public void setCodeUe(String codeUe) {
+		this.codeUe = codeUe;
 	}
-	public String getIntitule_UE() {
-		return Intitule_UE;
+	public String getIntitule() {
+		return intitule;
 	}
-	public void setIntitule_UE(String intitule_UE) {
-		Intitule_UE = intitule_UE;
+	public void setIntitule(String intitule) {
+		this.intitule = intitule;
 	}
 	public Date getDateCreation() {
-		return DateCreation;
+		return dateCreation;
 	}
 	public void setDateCreation(Date dateCreation) {
-		DateCreation = dateCreation;
+		this.dateCreation = dateCreation;
 	}
-	public String getCode_UCrea() {
-		return Code_UCrea;
+	public String getCodeUCrea() {
+		return codeUCrea;
 	}
-	public void setCode_UCrea(String code_UCrea) {
-		Code_UCrea = code_UCrea;
+	public void setCodeUCrea(String codeUCrea) {
+		this.codeUCrea = codeUCrea;
 	}
 	public Date getDateMAJ() {
-		return DateMAJ;
+		return dateMAJ;
 	}
 	public void setDateMAJ(Date dateMAJ) {
-		DateMAJ = dateMAJ;
+		this.dateMAJ = dateMAJ;
 	}
-	public String getCode_UMAJ() {
-		return Code_UMAJ;
+	public String getCodeUMAJ() {
+		return codeUMAJ;
 	}
-	public void setCode_UMAJ(String code_UMAJ) {
-		Code_UMAJ = code_UMAJ;
+	public void setCodeUMAJ(String codeUMAJ) {
+		this.codeUMAJ = codeUMAJ;
 	}
 	public Date getDateSuppr() {
-		return DateSuppr;
+		return dateSuppr;
 	}
 	public void setDateSuppr(Date dateSuppr) {
-		DateSuppr = dateSuppr;
+		this.dateSuppr = dateSuppr;
 	}
-	public String getCode_USuppr() {
-		return Code_USuppr;
+	public String getCodeUSuppr() {
+		return codeUSuppr;
 	}
-	public void setCode_USuppr(String code_USuppr) {
-		Code_USuppr = code_USuppr;
+	public void setCodeUSuppr(String codeUSuppr) {
+		this.codeUSuppr = codeUSuppr;
 	}
-	public String getCodePerso_UE() {
-		return CodePerso_UE;
+	public String getCodePersoUE() {
+		return codePersoUE;
 	}
-	public void setCodePerso_UE(String codePerso_UE) {
-		CodePerso_UE = codePerso_UE;
+	public void setCodePersoUE(String codePersoUE) {
+		this.codePersoUE = codePersoUE;
 	}
-	
 	public Ue() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	
-	public Ue(Long id_UE, String code_UE, String intitule_UE, Date dateCreation, String code_UCrea, Date dateMAJ,
-			String code_UMAJ, Date dateSuppr, String code_USuppr, String codePerso_UE) {
+	public Ue(Long idUe, String codeUe, String intitule, Date dateCreation, String codeUCrea, Date dateMAJ,
+			String codeUMAJ, Date dateSuppr, String codeUSuppr, String codePersoUE) {
 		super();
-		Id_UE = id_UE;
-		Code_UE = code_UE;
-		Intitule_UE = intitule_UE;
-		DateCreation = dateCreation;
-		Code_UCrea = code_UCrea;
-		DateMAJ = dateMAJ;
-		Code_UMAJ = code_UMAJ;
-		DateSuppr = dateSuppr;
-		Code_USuppr = code_USuppr;
-		CodePerso_UE = codePerso_UE;
+		this.idUe = idUe;
+		this.codeUe = codeUe;
+		this.intitule = intitule;
+		this.dateCreation = dateCreation;
+		this.codeUCrea = codeUCrea;
+		this.dateMAJ = dateMAJ;
+		this.codeUMAJ = codeUMAJ;
+		this.dateSuppr = dateSuppr;
+		this.codeUSuppr = codeUSuppr;
+		this.codePersoUE = codePersoUE;
 	}
-	
 	@Override
 	public String toString() {
-		return "Ue [Id_UE=" + Id_UE + ", Code_UE=" + Code_UE + ", Intitule_UE=" + Intitule_UE + ", DateCreation="
-				+ DateCreation + ", Code_UCrea=" + Code_UCrea + ", DateMAJ=" + DateMAJ + ", Code_UMAJ=" + Code_UMAJ
-				+ ", DateSuppr=" + DateSuppr + ", Code_USuppr=" + Code_USuppr + ", CodePerso_UE=" + CodePerso_UE + "]";
+		return "Ue [idUe=" + idUe + ", codeUe=" + codeUe + ", intitule=" + intitule + ", dateCreation=" + dateCreation
+				+ ", codeUCrea=" + codeUCrea + ", dateMAJ=" + dateMAJ + ", codeUMAJ=" + codeUMAJ + ", dateSuppr="
+				+ dateSuppr + ", codeUSuppr=" + codeUSuppr + ", codePersoUE=" + codePersoUE + "]";
 	}
 	
 	

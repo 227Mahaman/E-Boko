@@ -14,166 +14,164 @@ public class Module {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long Id_Mo;
-	private String Code_Mo;
-	private String Credit_Mo;
-	@JoinColumn(name="Code_A")
-	@ManyToOne
-	private String Code_A;
-	@JoinColumn(name="Code_F")
-	@ManyToOne
-	private String Code_F;
-	@JoinColumn(name="Code_N")
-	@ManyToOne
-	private String Code_N;
-	@JoinColumn(name="Code_UE")
-	@ManyToOne
-	private String Code_UE;
-	private String Code_M;
-	@JoinColumn(name="Code_S")
-	@ManyToOne
-	private String Code_S;
-	private String Choix_Mo;
-	private Date DateCreation;
-	private String Code_UCrea;
-	private Date DateMAJ;
-	private String Code_UMAJ;
+	private Long idMo;
+	private String codeMo;
+	private String creditMo;
+	//@JoinColumn(name="Code_A")
+	//@ManyToOne
+	private String codeA;
+	//@JoinColumn(name="Code_F")
+	//@ManyToOne
+	private String codeF;
+	//@JoinColumn(name="Code_N")
+	//@ManyToOne
+	private String codeN;
+	//@JoinColumn(name="Code_UE")
+	//@ManyToOne
+	private String codeUE;
+	private String codeM;
+	//@JoinColumn(name="Code_S")
+	//@ManyToOne
+	private String codeS;
+	private String choixMo;
+	private Date dateCreation;
+	private String codeUCrea;
+	private Date dateMAJ;
+	private String codeUMAJ;
 	//`IsSuppr` tinyint(1) DEFAULT '0',
-	private Date DateSuppr;
-	private String Code_USuppr;
+	private Date dateSuppr;
+	private String codeUSuppr;
 	//`IsObliged_Mo` tinyint(1) DEFAULT '0',
-	public Long getId_Mo() {
-		return Id_Mo;
+	public Long getIdMo() {
+		return idMo;
 	}
-	public void setId_Mo(Long id_Mo) {
-		Id_Mo = id_Mo;
+	public void setIdMo(Long idMo) {
+		this.idMo = idMo;
 	}
-	public String getCode_Mo() {
-		return Code_Mo;
+	public String getCodeMo() {
+		return codeMo;
 	}
-	public void setCode_Mo(String code_Mo) {
-		Code_Mo = code_Mo;
+	public void setCodeMo(String codeMo) {
+		this.codeMo = codeMo;
 	}
-	public String getCredit_Mo() {
-		return Credit_Mo;
+	public String getCreditMo() {
+		return creditMo;
 	}
-	public void setCredit_Mo(String credit_Mo) {
-		Credit_Mo = credit_Mo;
+	public void setCreditMo(String creditMo) {
+		this.creditMo = creditMo;
 	}
-	public String getCode_A() {
-		return Code_A;
+	public String getCodeA() {
+		return codeA;
 	}
-	public void setCode_A(String code_A) {
-		Code_A = code_A;
+	public void setCodeA(String codeA) {
+		this.codeA = codeA;
 	}
-	public String getCode_F() {
-		return Code_F;
+	public String getCodeF() {
+		return codeF;
 	}
-	public void setCode_F(String code_F) {
-		Code_F = code_F;
+	public void setCodeF(String codeF) {
+		this.codeF = codeF;
 	}
-	public String getCode_N() {
-		return Code_N;
+	public String getCodeN() {
+		return codeN;
 	}
-	public void setCode_N(String code_N) {
-		Code_N = code_N;
+	public void setCodeN(String codeN) {
+		this.codeN = codeN;
 	}
-	public String getCode_UE() {
-		return Code_UE;
+	public String getCodeUE() {
+		return codeUE;
 	}
-	public void setCode_UE(String code_UE) {
-		Code_UE = code_UE;
+	public void setCodeUE(String codeUE) {
+		this.codeUE = codeUE;
 	}
-	public String getCode_M() {
-		return Code_M;
+	public String getCodeM() {
+		return codeM;
 	}
-	public void setCode_M(String code_M) {
-		Code_M = code_M;
+	public void setCodeM(String codeM) {
+		this.codeM = codeM;
 	}
-	public String getCode_S() {
-		return Code_S;
+	public String getCodeS() {
+		return codeS;
 	}
-	public void setCode_S(String code_S) {
-		Code_S = code_S;
+	public void setCodeS(String codeS) {
+		this.codeS = codeS;
 	}
-	public String getChoix_Mo() {
-		return Choix_Mo;
+	public String getChoixMo() {
+		return choixMo;
 	}
-	public void setChoix_Mo(String choix_Mo) {
-		Choix_Mo = choix_Mo;
+	public void setChoixMo(String choixMo) {
+		this.choixMo = choixMo;
 	}
 	public Date getDateCreation() {
-		return DateCreation;
+		return dateCreation;
 	}
 	public void setDateCreation(Date dateCreation) {
-		DateCreation = dateCreation;
+		this.dateCreation = dateCreation;
 	}
-	public String getCode_UCrea() {
-		return Code_UCrea;
+	public String getCodeUCrea() {
+		return codeUCrea;
 	}
-	public void setCode_UCrea(String code_UCrea) {
-		Code_UCrea = code_UCrea;
+	public void setCodeUCrea(String codeUCrea) {
+		this.codeUCrea = codeUCrea;
 	}
 	public Date getDateMAJ() {
-		return DateMAJ;
+		return dateMAJ;
 	}
 	public void setDateMAJ(Date dateMAJ) {
-		DateMAJ = dateMAJ;
+		this.dateMAJ = dateMAJ;
 	}
-	public String getCode_UMAJ() {
-		return Code_UMAJ;
+	public String getCodeUMAJ() {
+		return codeUMAJ;
 	}
-	public void setCode_UMAJ(String code_UMAJ) {
-		Code_UMAJ = code_UMAJ;
+	public void setCodeUMAJ(String codeUMAJ) {
+		this.codeUMAJ = codeUMAJ;
 	}
 	public Date getDateSuppr() {
-		return DateSuppr;
+		return dateSuppr;
 	}
 	public void setDateSuppr(Date dateSuppr) {
-		DateSuppr = dateSuppr;
+		this.dateSuppr = dateSuppr;
 	}
-	public String getCode_USuppr() {
-		return Code_USuppr;
+	public String getCodeUSuppr() {
+		return codeUSuppr;
 	}
-	public void setCode_USuppr(String code_USuppr) {
-		Code_USuppr = code_USuppr;
+	public void setCodeUSuppr(String codeUSuppr) {
+		this.codeUSuppr = codeUSuppr;
 	}
-	
 	public Module() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	
-	public Module(Long id_Mo, String code_Mo, String credit_Mo, String code_A, String code_F, String code_N,
-			String code_UE, String code_M, String code_S, String choix_Mo, Date dateCreation, String code_UCrea,
-			Date dateMAJ, String code_UMAJ, Date dateSuppr, String code_USuppr) {
+	public Module(Long idMo, String codeMo, String creditMo, String codeA, String codeF, String codeN, String codeUE,
+			String codeM, String codeS, String choixMo, Date dateCreation, String codeUCrea, Date dateMAJ,
+			String codeUMAJ, Date dateSuppr, String codeUSuppr) {
 		super();
-		Id_Mo = id_Mo;
-		Code_Mo = code_Mo;
-		Credit_Mo = credit_Mo;
-		Code_A = code_A;
-		Code_F = code_F;
-		Code_N = code_N;
-		Code_UE = code_UE;
-		Code_M = code_M;
-		Code_S = code_S;
-		Choix_Mo = choix_Mo;
-		DateCreation = dateCreation;
-		Code_UCrea = code_UCrea;
-		DateMAJ = dateMAJ;
-		Code_UMAJ = code_UMAJ;
-		DateSuppr = dateSuppr;
-		Code_USuppr = code_USuppr;
+		this.idMo = idMo;
+		this.codeMo = codeMo;
+		this.creditMo = creditMo;
+		this.codeA = codeA;
+		this.codeF = codeF;
+		this.codeN = codeN;
+		this.codeUE = codeUE;
+		this.codeM = codeM;
+		this.codeS = codeS;
+		this.choixMo = choixMo;
+		this.dateCreation = dateCreation;
+		this.codeUCrea = codeUCrea;
+		this.dateMAJ = dateMAJ;
+		this.codeUMAJ = codeUMAJ;
+		this.dateSuppr = dateSuppr;
+		this.codeUSuppr = codeUSuppr;
 	}
-	
 	@Override
 	public String toString() {
-		return "Module [Id_Mo=" + Id_Mo + ", Code_Mo=" + Code_Mo + ", Credit_Mo=" + Credit_Mo + ", Code_A=" + Code_A
-				+ ", Code_F=" + Code_F + ", Code_N=" + Code_N + ", Code_UE=" + Code_UE + ", Code_M=" + Code_M
-				+ ", Code_S=" + Code_S + ", Choix_Mo=" + Choix_Mo + ", DateCreation=" + DateCreation + ", Code_UCrea="
-				+ Code_UCrea + ", DateMAJ=" + DateMAJ + ", Code_UMAJ=" + Code_UMAJ + ", DateSuppr=" + DateSuppr
-				+ ", Code_USuppr=" + Code_USuppr + "]";
+		return "Module [idMo=" + idMo + ", codeMo=" + codeMo + ", creditMo=" + creditMo + ", codeA=" + codeA
+				+ ", codeF=" + codeF + ", codeN=" + codeN + ", codeUE=" + codeUE + ", codeM=" + codeM + ", codeS="
+				+ codeS + ", choixMo=" + choixMo + ", dateCreation=" + dateCreation + ", codeUCrea=" + codeUCrea
+				+ ", dateMAJ=" + dateMAJ + ", codeUMAJ=" + codeUMAJ + ", dateSuppr=" + dateSuppr + ", codeUSuppr="
+				+ codeUSuppr + "]";
 	}
+	
 	
 	
 }

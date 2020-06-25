@@ -12,106 +12,102 @@ public class Filiere {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long Id_F;
-	private String Code_F;
-	private String Intitule_F;
-	private String Description_F;
+	private Long idF;
+	private String codeF;
+	private String intituleF;
+	private String descriptionF;
 	//`Choix_F` tinyint(1) DEFAULT '0',
-	private Date DateCreation;
-	private String Code_UCrea;
-	private Date DateMAJ;
-	private String Code_UMAJ;
+	private Date dateCreation;
+	private String codeUCrea;
+	private Date dateMAJ;
+	private String codeUMAJ;
 	//`IsSuppr` tinyint(1) DEFAULT '0',
-	private Date DateSuppr;
-	private String Code_USuppr;
-	public Long getId_F() {
-		return Id_F;
+	private Date dateSuppr;
+	private String codeUSuppr;
+	public Long getIdF() {
+		return idF;
 	}
-	public void setId_F(Long id_F) {
-		Id_F = id_F;
+	public void setIdF(Long idF) {
+		this.idF = idF;
 	}
-	public String getCode_F() {
-		return Code_F;
+	public String getCodeF() {
+		return codeF;
 	}
-	public void setCode_F(String code_F) {
-		Code_F = code_F;
+	public void setCodeF(String codeF) {
+		this.codeF = codeF;
 	}
-	public String getIntitule_F() {
-		return Intitule_F;
+	public String getIntituleF() {
+		return intituleF;
 	}
-	public void setIntitule_F(String intitule_F) {
-		Intitule_F = intitule_F;
+	public void setIntituleF(String intituleF) {
+		this.intituleF = intituleF;
 	}
-	public String getDescription_F() {
-		return Description_F;
+	public String getDescriptionF() {
+		return descriptionF;
 	}
-	public void setDescription_F(String description_F) {
-		Description_F = description_F;
+	public void setDescriptionF(String descriptionF) {
+		this.descriptionF = descriptionF;
 	}
 	public Date getDateCreation() {
-		return DateCreation;
+		return dateCreation;
 	}
 	public void setDateCreation(Date dateCreation) {
-		DateCreation = dateCreation;
+		this.dateCreation = dateCreation;
 	}
-	public String getCode_UCrea() {
-		return Code_UCrea;
+	public String getCodeUCrea() {
+		return codeUCrea;
 	}
-	public void setCode_UCrea(String code_UCrea) {
-		Code_UCrea = code_UCrea;
+	public void setCodeUCrea(String codeUCrea) {
+		this.codeUCrea = codeUCrea;
 	}
 	public Date getDateMAJ() {
-		return DateMAJ;
+		return dateMAJ;
 	}
 	public void setDateMAJ(Date dateMAJ) {
-		DateMAJ = dateMAJ;
+		this.dateMAJ = dateMAJ;
 	}
-	public String getCode_UMAJ() {
-		return Code_UMAJ;
+	public String getCodeUMAJ() {
+		return codeUMAJ;
 	}
-	public void setCode_UMAJ(String code_UMAJ) {
-		Code_UMAJ = code_UMAJ;
+	public void setCodeUMAJ(String codeUMAJ) {
+		this.codeUMAJ = codeUMAJ;
 	}
 	public Date getDateSuppr() {
-		return DateSuppr;
+		return dateSuppr;
 	}
 	public void setDateSuppr(Date dateSuppr) {
-		DateSuppr = dateSuppr;
+		this.dateSuppr = dateSuppr;
 	}
-	public String getCode_USuppr() {
-		return Code_USuppr;
+	public String getCodeUSuppr() {
+		return codeUSuppr;
 	}
-	public void setCode_USuppr(String code_USuppr) {
-		Code_USuppr = code_USuppr;
+	public void setCodeUSuppr(String codeUSuppr) {
+		this.codeUSuppr = codeUSuppr;
 	}
-	
 	public Filiere() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	
-	public Filiere(Long id_F, String code_F, String intitule_F, String description_F, Date dateCreation,
-			String code_UCrea, Date dateMAJ, String code_UMAJ, Date dateSuppr, String code_USuppr) {
+	public Filiere(Long idF, String codeF, String intituleF, String descriptionF, Date dateCreation, String codeUCrea,
+			Date dateMAJ, String codeUMAJ, Date dateSuppr, String codeUSuppr) {
 		super();
-		Id_F = id_F;
-		Code_F = code_F;
-		Intitule_F = intitule_F;
-		Description_F = description_F;
-		DateCreation = dateCreation;
-		Code_UCrea = code_UCrea;
-		DateMAJ = dateMAJ;
-		Code_UMAJ = code_UMAJ;
-		DateSuppr = dateSuppr;
-		Code_USuppr = code_USuppr;
+		this.idF = idF;
+		this.codeF = codeF;
+		this.intituleF = intituleF;
+		this.descriptionF = descriptionF;
+		this.dateCreation = dateCreation;
+		this.codeUCrea = codeUCrea;
+		this.dateMAJ = dateMAJ;
+		this.codeUMAJ = codeUMAJ;
+		this.dateSuppr = dateSuppr;
+		this.codeUSuppr = codeUSuppr;
 	}
-	
 	@Override
 	public String toString() {
-		return "Filiere [Id_F=" + Id_F + ", Code_F=" + Code_F + ", Intitule_F=" + Intitule_F + ", Description_F="
-				+ Description_F + ", DateCreation=" + DateCreation + ", Code_UCrea=" + Code_UCrea + ", DateMAJ="
-				+ DateMAJ + ", Code_UMAJ=" + Code_UMAJ + ", DateSuppr=" + DateSuppr + ", Code_USuppr=" + Code_USuppr
-				+ "]";
+		return "Filiere [idF=" + idF + ", codeF=" + codeF + ", intituleF=" + intituleF + ", descriptionF="
+				+ descriptionF + ", dateCreation=" + dateCreation + ", codeUCrea=" + codeUCrea + ", dateMAJ=" + dateMAJ
+				+ ", codeUMAJ=" + codeUMAJ + ", dateSuppr=" + dateSuppr + ", codeUSuppr=" + codeUSuppr + "]";
 	}
-
+	
 	
 }

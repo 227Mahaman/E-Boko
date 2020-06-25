@@ -14,103 +14,103 @@ public class Semestre {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long Id_S;
-	private String Code_S;
-	@JoinColumn(name="Code_N")
-	@ManyToOne
-	private String Code_N;
-	private String Intitule_S;
+	private Long idS;
+	private String codeS;
+	//@JoinColumn(name="Code_N")
+	//@ManyToOne
+	private String codeN;
+	private String intituleS;
 	 // `Choix_S` tinyint(1) DEFAULT '0',
-	private Date DateCreation;
-	private String Code_UCrea;
-	private Date DateMAJ;
-	private String Code_UMAJ;
+	private Date dateCreation;
+	private String codeUCrea;
+	private Date dateMAJ;
+	private String codeUMAJ;
 	 // `IsSuppr` tinyint(1) DEFAULT '0',
-	private Date DateSuppr;
-	private String Code_USuppr;
-	public Long getId_S() {
-		return Id_S;
+	private Date dateSuppr;
+	private String codeUSuppr;
+	public Long getIdS() {
+		return idS;
 	}
-	public void setId_S(Long id_S) {
-		Id_S = id_S;
+	public void setIdS(Long idS) {
+		this.idS = idS;
 	}
-	public String getCode_S() {
-		return Code_S;
+	public String getCodeS() {
+		return codeS;
 	}
-	public void setCode_S(String code_S) {
-		Code_S = code_S;
+	public void setCodeS(String codeS) {
+		this.codeS = codeS;
 	}
-	public String getCode_N() {
-		return Code_N;
+	public String getCodeN() {
+		return codeN;
 	}
-	public void setCode_N(String code_N) {
-		Code_N = code_N;
+	public void setCodeN(String codeN) {
+		this.codeN = codeN;
 	}
-	public String getIntitule_S() {
-		return Intitule_S;
+	public String getIntituleS() {
+		return intituleS;
 	}
-	public void setIntitule_S(String intitule_S) {
-		Intitule_S = intitule_S;
+	public void setIntituleS(String intituleS) {
+		this.intituleS = intituleS;
 	}
 	public Date getDateCreation() {
-		return DateCreation;
+		return dateCreation;
 	}
 	public void setDateCreation(Date dateCreation) {
-		DateCreation = dateCreation;
+		this.dateCreation = dateCreation;
 	}
-	public String getCode_UCrea() {
-		return Code_UCrea;
+	public String getCodeUCrea() {
+		return codeUCrea;
 	}
-	public void setCode_UCrea(String code_UCrea) {
-		Code_UCrea = code_UCrea;
+	public void setCodeUCrea(String codeUCrea) {
+		this.codeUCrea = codeUCrea;
 	}
 	public Date getDateMAJ() {
-		return DateMAJ;
+		return dateMAJ;
 	}
 	public void setDateMAJ(Date dateMAJ) {
-		DateMAJ = dateMAJ;
+		this.dateMAJ = dateMAJ;
 	}
-	public String getCode_UMAJ() {
-		return Code_UMAJ;
+	public String getCodeUMAJ() {
+		return codeUMAJ;
 	}
-	public void setCode_UMAJ(String code_UMAJ) {
-		Code_UMAJ = code_UMAJ;
+	public void setCodeUMAJ(String codeUMAJ) {
+		this.codeUMAJ = codeUMAJ;
 	}
 	public Date getDateSuppr() {
-		return DateSuppr;
+		return dateSuppr;
 	}
 	public void setDateSuppr(Date dateSuppr) {
-		DateSuppr = dateSuppr;
+		this.dateSuppr = dateSuppr;
 	}
-	public String getCode_USuppr() {
-		return Code_USuppr;
+	public String getCodeUSuppr() {
+		return codeUSuppr;
 	}
-	public void setCode_USuppr(String code_USuppr) {
-		Code_USuppr = code_USuppr;
+	public void setCodeUSuppr(String codeUSuppr) {
+		this.codeUSuppr = codeUSuppr;
 	}
 	public Semestre() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Semestre(Long id_S, String code_S, String code_N, String intitule_S, Date dateCreation, String code_UCrea,
-			Date dateMAJ, String code_UMAJ, Date dateSuppr, String code_USuppr) {
+	public Semestre(Long idS, String codeS, String codeN, String intituleS, Date dateCreation, String codeUCrea,
+			Date dateMAJ, String codeUMAJ, Date dateSuppr, String codeUSuppr) {
 		super();
-		Id_S = id_S;
-		Code_S = code_S;
-		Code_N = code_N;
-		Intitule_S = intitule_S;
-		DateCreation = dateCreation;
-		Code_UCrea = code_UCrea;
-		DateMAJ = dateMAJ;
-		Code_UMAJ = code_UMAJ;
-		DateSuppr = dateSuppr;
-		Code_USuppr = code_USuppr;
+		this.idS = idS;
+		this.codeS = codeS;
+		this.codeN = codeN;
+		this.intituleS = intituleS;
+		this.dateCreation = dateCreation;
+		this.codeUCrea = codeUCrea;
+		this.dateMAJ = dateMAJ;
+		this.codeUMAJ = codeUMAJ;
+		this.dateSuppr = dateSuppr;
+		this.codeUSuppr = codeUSuppr;
 	}
 	@Override
 	public String toString() {
-		return "Semestre [Id_S=" + Id_S + ", Code_S=" + Code_S + ", Code_N=" + Code_N + ", Intitule_S=" + Intitule_S
-				+ ", DateCreation=" + DateCreation + ", Code_UCrea=" + Code_UCrea + ", DateMAJ=" + DateMAJ
-				+ ", Code_UMAJ=" + Code_UMAJ + ", DateSuppr=" + DateSuppr + ", Code_USuppr=" + Code_USuppr + "]";
+		return "Semestre [idS=" + idS + ", codeS=" + codeS + ", codeN=" + codeN + ", intituleS=" + intituleS
+				+ ", dateCreation=" + dateCreation + ", codeUCrea=" + codeUCrea + ", dateMAJ=" + dateMAJ + ", codeUMAJ="
+				+ codeUMAJ + ", dateSuppr=" + dateSuppr + ", codeUSuppr=" + codeUSuppr + "]";
 	}
 	
 	

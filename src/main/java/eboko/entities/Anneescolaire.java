@@ -10,62 +10,60 @@ public class Anneescolaire {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long Id_A;
-	private String Code_A;
-	private String Intitule_A;
-	private String datasource_A;
+	private Long idA;
+	private String codeA;
+	private String intituleA;
+	private String datasourceA;
   	//`isDefault_A;
-	private String DA;
-	public Long getId_A() {
-		return Id_A;
+	private String dA;
+	public Long getIdA() {
+		return idA;
 	}
-	public void setId_A(Long id_A) {
-		Id_A = id_A;
+	public void setIdA(Long idA) {
+		this.idA = idA;
 	}
-	public String getCode_A() {
-		return Code_A;
+	public String getCodeA() {
+		return codeA;
 	}
-	public void setCode_A(String code_A) {
-		Code_A = code_A;
+	public void setCodeA(String codeA) {
+		this.codeA = codeA;
 	}
-	public String getIntitule_A() {
-		return Intitule_A;
+	public String getIntituleA() {
+		return intituleA;
 	}
-	public void setIntitule_A(String intitule_A) {
-		Intitule_A = intitule_A;
+	public void setIntituleA(String intituleA) {
+		this.intituleA = intituleA;
 	}
-	public String getDatasource_A() {
-		return datasource_A;
+	public String getDatasourceA() {
+		return datasourceA;
 	}
-	public void setDatasource_A(String datasource_A) {
-		this.datasource_A = datasource_A;
+	public void setDatasourceA(String datasourceA) {
+		this.datasourceA = datasourceA;
 	}
-	public String getDA() {
-		return DA;
+	public String getdA() {
+		return dA;
 	}
-	public void setDA(String dA) {
-		DA = dA;
+	public void setdA(String dA) {
+		this.dA = dA;
 	}
-	
 	public Anneescolaire() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	
-	public Anneescolaire(Long id_A, String code_A, String intitule_A, String datasource_A, String dA) {
+	public Anneescolaire(Long idA, String codeA, String intituleA, String datasourceA, String dA) {
 		super();
-		Id_A = id_A;
-		Code_A = code_A;
-		Intitule_A = intitule_A;
-		this.datasource_A = datasource_A;
-		DA = dA;
+		this.idA = idA;
+		this.codeA = codeA;
+		this.intituleA = intituleA;
+		this.datasourceA = datasourceA;
+		this.dA = dA;
 	}
-	
 	@Override
 	public String toString() {
-		return "Anneescolaire [Id_A=" + Id_A + ", Code_A=" + Code_A + ", Intitule_A=" + Intitule_A + ", datasource_A="
-				+ datasource_A + ", DA=" + DA + "]";
+		return "Anneescolaire [idA=" + idA + ", codeA=" + codeA + ", intituleA=" + intituleA + ", datasourceA="
+				+ datasourceA + ", dA=" + dA + "]";
 	}
 	
 	
+		
 }

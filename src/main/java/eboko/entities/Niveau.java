@@ -12,102 +12,101 @@ public class Niveau {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long Id_N;
-	private String Code_N;
-  	private String Intitule_N;
-  	private String MontantScolarite_N;
+	private Long idN;
+	private String codeN;
+  	private String intituleN;
+  	private String montantScolariteN;
   	//`Choix_N` tinyint(1) DEFAULT '0',
- 	private Date DateCreation;
-  	private String Code_UCrea;
-  	private Date DateMAJ;
-  	private String Code_UMAJ;
+ 	private Date dateCreation;
+  	private String codeUCrea;
+  	private Date dateMAJ;
+  	private String codeUMAJ;
   	//`IsSuppr` tinyint(1) DEFAULT '0',
-	private Date DateSuppr;
-  	private String Code_USuppr;
-	public Long getId_N() {
-		return Id_N;
+	private Date dateSuppr;
+  	private String codeUSuppr;
+	public Long getIdN() {
+		return idN;
 	}
-	public void setId_N(Long id_N) {
-		Id_N = id_N;
+	public void setIdN(Long idN) {
+		this.idN = idN;
 	}
-	public String getCode_N() {
-		return Code_N;
+	public String getCodeN() {
+		return codeN;
 	}
-	public void setCode_N(String code_N) {
-		Code_N = code_N;
+	public void setCodeN(String codeN) {
+		this.codeN = codeN;
 	}
-	public String getIntitule_N() {
-		return Intitule_N;
+	public String getIntituleN() {
+		return intituleN;
 	}
-	public void setIntitule_N(String intitule_N) {
-		Intitule_N = intitule_N;
+	public void setIntituleN(String intituleN) {
+		this.intituleN = intituleN;
 	}
-	public String getMontantScolarite_N() {
-		return MontantScolarite_N;
+	public String getMontantScolariteN() {
+		return montantScolariteN;
 	}
-	public void setMontantScolarite_N(String montantScolarite_N) {
-		MontantScolarite_N = montantScolarite_N;
+	public void setMontantScolariteN(String montantScolariteN) {
+		this.montantScolariteN = montantScolariteN;
 	}
 	public Date getDateCreation() {
-		return DateCreation;
+		return dateCreation;
 	}
 	public void setDateCreation(Date dateCreation) {
-		DateCreation = dateCreation;
+		this.dateCreation = dateCreation;
 	}
-	public String getCode_UCrea() {
-		return Code_UCrea;
+	public String getCodeUCrea() {
+		return codeUCrea;
 	}
-	public void setCode_UCrea(String code_UCrea) {
-		Code_UCrea = code_UCrea;
+	public void setCodeUCrea(String codeUCrea) {
+		this.codeUCrea = codeUCrea;
 	}
 	public Date getDateMAJ() {
-		return DateMAJ;
+		return dateMAJ;
 	}
 	public void setDateMAJ(Date dateMAJ) {
-		DateMAJ = dateMAJ;
+		this.dateMAJ = dateMAJ;
 	}
-	public String getCode_UMAJ() {
-		return Code_UMAJ;
+	public String getCodeUMAJ() {
+		return codeUMAJ;
 	}
-	public void setCode_UMAJ(String code_UMAJ) {
-		Code_UMAJ = code_UMAJ;
+	public void setCodeUMAJ(String codeUMAJ) {
+		this.codeUMAJ = codeUMAJ;
 	}
 	public Date getDateSuppr() {
-		return DateSuppr;
+		return dateSuppr;
 	}
 	public void setDateSuppr(Date dateSuppr) {
-		DateSuppr = dateSuppr;
+		this.dateSuppr = dateSuppr;
 	}
-	public String getCode_USuppr() {
-		return Code_USuppr;
+	public String getCodeUSuppr() {
+		return codeUSuppr;
 	}
-	public void setCode_USuppr(String code_USuppr) {
-		Code_USuppr = code_USuppr;
+	public void setCodeUSuppr(String codeUSuppr) {
+		this.codeUSuppr = codeUSuppr;
 	}
 	public Niveau() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Niveau(Long id_N, String code_N, String intitule_N, String montantScolarite_N, Date dateCreation,
-			String code_UCrea, Date dateMAJ, String code_UMAJ, Date dateSuppr, String code_USuppr) {
+	public Niveau(Long idN, String codeN, String intituleN, String montantScolariteN, Date dateCreation,
+			String codeUCrea, Date dateMAJ, String codeUMAJ, Date dateSuppr, String codeUSuppr) {
 		super();
-		Id_N = id_N;
-		Code_N = code_N;
-		Intitule_N = intitule_N;
-		MontantScolarite_N = montantScolarite_N;
-		DateCreation = dateCreation;
-		Code_UCrea = code_UCrea;
-		DateMAJ = dateMAJ;
-		Code_UMAJ = code_UMAJ;
-		DateSuppr = dateSuppr;
-		Code_USuppr = code_USuppr;
+		this.idN = idN;
+		this.codeN = codeN;
+		this.intituleN = intituleN;
+		this.montantScolariteN = montantScolariteN;
+		this.dateCreation = dateCreation;
+		this.codeUCrea = codeUCrea;
+		this.dateMAJ = dateMAJ;
+		this.codeUMAJ = codeUMAJ;
+		this.dateSuppr = dateSuppr;
+		this.codeUSuppr = codeUSuppr;
 	}
 	@Override
 	public String toString() {
-		return "Niveau [Id_N=" + Id_N + ", Code_N=" + Code_N + ", Intitule_N=" + Intitule_N + ", MontantScolarite_N="
-				+ MontantScolarite_N + ", DateCreation=" + DateCreation + ", Code_UCrea=" + Code_UCrea + ", DateMAJ="
-				+ DateMAJ + ", Code_UMAJ=" + Code_UMAJ + ", DateSuppr=" + DateSuppr + ", Code_USuppr=" + Code_USuppr
-				+ "]";
+		return "Niveau [idN=" + idN + ", codeN=" + codeN + ", intituleN=" + intituleN + ", montantScolariteN="
+				+ montantScolariteN + ", dateCreation=" + dateCreation + ", codeUCrea=" + codeUCrea + ", dateMAJ="
+				+ dateMAJ + ", codeUMAJ=" + codeUMAJ + ", dateSuppr=" + dateSuppr + ", codeUSuppr=" + codeUSuppr + "]";
 	}
   	
 }
