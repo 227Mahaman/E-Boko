@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import eboko.dao.IUeDao;
@@ -22,7 +23,7 @@ public class UeController {
 		return ue;
 	}
 	
-	@PostMapping("/ue/findAllUe")
+	@RequestMapping("/ue/findAllUe")
 	public List<Ue> findAllUe(){
 		return ueDao.findAll();
 	}
@@ -37,7 +38,7 @@ public class UeController {
 		//return ueDao.ueByCode("%"+search+"%", new PageRequest(page, 5));
 	//}
 	
-	@PostMapping("/ue/getUe")
+	@RequestMapping("/ue/getUe")
 	public Ue getUe(Long id) {
 		return ueDao.findById(id).orElse(null);
 	}

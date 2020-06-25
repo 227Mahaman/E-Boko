@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import eboko.dao.ISalleDao;
@@ -22,12 +23,12 @@ public class SalleController {
 		return salle;
 	}
 	
-	@PostMapping("/salle/findAllSalle")
+	@RequestMapping("/salle/findAllSalle")
 	public List<Salle> findAllSalle(){
 		return salleDao.findAll();
 	}
 	
-	@PostMapping("/salle/getSalle")
+	@RequestMapping("/salle/getSalle")
 	public Salle getSalle(Long id) {
 		return salleDao.findById(id).orElse(null);
 	}

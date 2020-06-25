@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import eboko.dao.INiveauDao;
@@ -22,12 +23,12 @@ public class NiveauController {
 		return niveau;
 	}
 	
-	@PostMapping("/niveau/findAllNiveau")
+	@RequestMapping("/niveau/findAllNiveau")
 	public List<Niveau> findAllNiveau(){
 		return niveauDao.findAll();
 	}
 	
-	@PostMapping("/niveau/getNiveau")
+	@RequestMapping("/niveau/getNiveau")
 	public Niveau getNiveau(Long id) {
 		return niveauDao.findById(id).orElse(null);
 	}

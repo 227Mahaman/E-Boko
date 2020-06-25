@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import eboko.dao.IFiliereDao;
@@ -22,12 +23,12 @@ public class FiliereController {
 		return filiere;
 	}
 	
-	@PostMapping("/filiere/findAllFiliere")
+	@RequestMapping("/filiere/findAllFiliere")
 	public List<Filiere> findAllFiliere(){
 		return filiereDao.findAll();
 	}
 	
-	@PostMapping("/filiere/getFiliere")
+	@RequestMapping("/filiere/getFiliere")
 	public Filiere getFiliere(Long id) {
 		return filiereDao.findById(id).orElse(null);
 	}

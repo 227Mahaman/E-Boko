@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import eboko.dao.IModuleDao;
@@ -22,12 +23,12 @@ public class ModuleController {
 		return module;
 	}
 	
-	@PostMapping("/module/findAllModule")
+	@RequestMapping("/module/findAllModule")
 	public List<Module> findAllModule(){
 		return moduleDao.findAll();
 	}
 	
-	@PostMapping("/module/getModule")
+	@RequestMapping("/module/getModule")
 	public Module getModule(Long id) {
 		return moduleDao.findById(id).orElse(null);
 	}

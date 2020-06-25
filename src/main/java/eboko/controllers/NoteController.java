@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import eboko.dao.INoteDao;
@@ -22,12 +23,12 @@ public class NoteController {
 		return note;
 	}
 	
-	@PostMapping("/note/findAllNote")
+	@RequestMapping("/note/findAllNote")
 	public List<Note> findAllNote(){
 		return noteDao.findAll();
 	}
 	
-	@PostMapping("/note/getNote")
+	@RequestMapping("/note/getNote")
 	public Note getNote(Long id) {
 		return noteDao.findById(id).orElse(null);
 	}

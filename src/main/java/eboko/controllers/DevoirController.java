@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import eboko.dao.IDevoirDao;
@@ -22,12 +23,12 @@ public class DevoirController {
 		return devoir;
 	}
 	
-	@PostMapping("/devoir/findAllDevoir")
+	@RequestMapping("/devoir/findAllDevoir")
 	public List<Devoir> findAllDevoir(){
 		return devoirDao.findAll();
 	}
 	
-	@PostMapping("/devoir/getDevoir")
+	@RequestMapping("/devoir/getDevoir")
 	public Devoir getDevoir(Long id) {
 		return devoirDao.findById(id).orElse(null);
 	}
