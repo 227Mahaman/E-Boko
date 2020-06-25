@@ -28,7 +28,7 @@ public class Module {
 	private String codeN;
 	//@JoinColumn(name="Code_UE")
 	//@ManyToOne
-	private String codeUE;
+	private String codeUe;
 	private String codeM;
 	//@JoinColumn(name="Code_S")
 	//@ManyToOne
@@ -78,11 +78,12 @@ public class Module {
 	public void setCodeN(String codeN) {
 		this.codeN = codeN;
 	}
-	public String getCodeUE() {
-		return codeUE;
+	
+	public String getCodeUe() {
+		return codeUe;
 	}
-	public void setCodeUE(String codeUE) {
-		this.codeUE = codeUE;
+	public void setCodeUe(String codeUe) {
+		this.codeUe = codeUe;
 	}
 	public String getCodeM() {
 		return codeM;
@@ -142,7 +143,7 @@ public class Module {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Module(Long idMo, String codeMo, String creditMo, String codeA, String codeF, String codeN, String codeUE,
+	public Module(Long idMo, String codeMo, String creditMo, String codeA, String codeF, String codeN, String codeUe,
 			String codeM, String codeS, String choixMo, Date dateCreation, String codeUCrea, Date dateMAJ,
 			String codeUMAJ, Date dateSuppr, String codeUSuppr) {
 		super();
@@ -152,7 +153,7 @@ public class Module {
 		this.codeA = codeA;
 		this.codeF = codeF;
 		this.codeN = codeN;
-		this.codeUE = codeUE;
+		this.codeUe = codeUe;
 		this.codeM = codeM;
 		this.codeS = codeS;
 		this.choixMo = choixMo;
@@ -166,12 +167,11 @@ public class Module {
 	@Override
 	public String toString() {
 		return "Module [idMo=" + idMo + ", codeMo=" + codeMo + ", creditMo=" + creditMo + ", codeA=" + codeA
-				+ ", codeF=" + codeF + ", codeN=" + codeN + ", codeUE=" + codeUE + ", codeM=" + codeM + ", codeS="
+				+ ", codeF=" + codeF + ", codeN=" + codeN + ", codeUe=" + codeUe + ", codeM=" + codeM + ", codeS="
 				+ codeS + ", choixMo=" + choixMo + ", dateCreation=" + dateCreation + ", codeUCrea=" + codeUCrea
 				+ ", dateMAJ=" + dateMAJ + ", codeUMAJ=" + codeUMAJ + ", dateSuppr=" + dateSuppr + ", codeUSuppr="
 				+ codeUSuppr + "]";
 	}
-	
 	
 	
 }

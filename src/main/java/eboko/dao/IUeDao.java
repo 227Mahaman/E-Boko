@@ -12,8 +12,8 @@ import eboko.entities.Ue;
 
 public interface IUeDao extends JpaRepository<Ue, Long> {
 
-	@Query("select u from Ue u where u.codeUE like :x")
-	public Page<Ue> ueByCode(@Param("x")String code, Pageable p);
+	@Query("select u from Ue u where u.codeUe like :x")
+	public Page<Ue> ueByCodeUe(@Param("x")String code, Pageable p);
 	
 	public List<Ue> findByIntitule(String intitule);
 	
