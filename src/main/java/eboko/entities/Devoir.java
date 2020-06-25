@@ -23,9 +23,9 @@ public class Devoir {
 	private String coefD;
 	//IsRemi_D` tinyint(1) DEFAULT '0',
 	private Date dateRemiseD;
-	//@JoinColumn(name="Code_Mo")
-	//@ManyToOne
-	private String codeMo;
+	@JoinColumn(name="codeMo")
+	@ManyToOne
+	private Module codeMo;
 	private String matriculePr;
 	private String nbHeureD;
 	private String heureDebutD;
@@ -93,10 +93,10 @@ public class Devoir {
 	public void setDateRemiseD(Date dateRemiseD) {
 		this.dateRemiseD = dateRemiseD;
 	}
-	public String getCodeMo() {
+	public Module getCodeMo() {
 		return codeMo;
 	}
-	public void setCodeMo(String codeMo) {
+	public void setCodeMo(Module codeMo) {
 		this.codeMo = codeMo;
 	}
 	public String getMatriculePr() {
@@ -194,7 +194,7 @@ public class Devoir {
 		// TODO Auto-generated constructor stub
 	}
 	public Devoir(Long idD, String codeD, String codeNu, Date dateD, String sessionD, String typeD, String coefD,
-			Date dateRemiseD, String codeMo, String matriculePr, String nbHeureD, String heureDebutD, String periodeD,
+			Date dateRemiseD, Module codeMo, String matriculePr, String nbHeureD, String heureDebutD, String periodeD,
 			Date dateAccepterD, String codeUAccepterD, Date dateValiderD, String codeUValiderD, Date dateAnnulerD,
 			String codeUAnnulerD, Date dateCreation, String codeUCrea, Date dateMAJ, String codeUMAJ, Date dateSuppr) {
 		super();

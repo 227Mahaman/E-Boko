@@ -18,9 +18,9 @@ public class Session {
 	private String codeSes;
 	private Date debutSes;
 	private Date finSes;
-	//@JoinColumn(name="Code_U")
-	//@ManyToOne
-	private String codeU;
+	@JoinColumn(name="codeU")
+	@ManyToOne
+	private Ue codeU;
 	public Long getIdSes() {
 		return idSes;
 	}
@@ -45,20 +45,18 @@ public class Session {
 	public void setFinSes(Date finSes) {
 		this.finSes = finSes;
 	}
-	public String getCodeU() {
+	
+	public Ue getCodeU() {
 		return codeU;
 	}
-	public void setCodeU(String codeU) {
+	public void setCodeU(Ue codeU) {
 		this.codeU = codeU;
 	}
-	
-	
 	public Session() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	
-	public Session(Long idSes, String codeSes, Date debutSes, Date finSes, String codeU) {
+	public Session(Long idSes, String codeSes, Date debutSes, Date finSes, Ue codeU) {
 		super();
 		this.idSes = idSes;
 		this.codeSes = codeSes;
@@ -71,6 +69,8 @@ public class Session {
 		return "Session [idSes=" + idSes + ", codeSes=" + codeSes + ", debutSes=" + debutSes + ", finSes=" + finSes
 				+ ", codeU=" + codeU + "]";
 	}
+	
+	
 	
 	
 }

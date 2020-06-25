@@ -17,12 +17,12 @@ public class Note {
 	private Long idNo;
 	private String codeNo;
 	private String valeurNo;
-	//@JoinColumn(name="Code_D")
-	//@ManyToOne
-	private String codeD;
-	//@JoinColumn(name="Matricule_E")
-	//@ManyToOne
-	private String matriculeE;
+	@JoinColumn(name="codeD")
+	@ManyToOne
+	private Devoir codeD;
+	@JoinColumn(name="matriculeE")
+	@ManyToOne
+	private Etudiant matriculeE;
 	//Choix_No` tinyint(1) DEFAULT '0',
 	private Date dateCreation;
 	private String codeUCrea;
@@ -49,16 +49,17 @@ public class Note {
 	public void setValeurNo(String valeurNo) {
 		this.valeurNo = valeurNo;
 	}
-	public String getCodeD() {
+	
+	public Devoir getCodeD() {
 		return codeD;
 	}
-	public void setCodeD(String codeD) {
+	public void setCodeD(Devoir codeD) {
 		this.codeD = codeD;
 	}
-	public String getMatriculeE() {
+	public Etudiant getMatriculeE() {
 		return matriculeE;
 	}
-	public void setMatriculeE(String matriculeE) {
+	public void setMatriculeE(Etudiant matriculeE) {
 		this.matriculeE = matriculeE;
 	}
 	public Date getDateCreation() {
@@ -101,7 +102,7 @@ public class Note {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Note(Long idNo, String codeNo, String valeurNo, String codeD, String matriculeE, Date dateCreation,
+	public Note(Long idNo, String codeNo, String valeurNo, Devoir codeD, Etudiant matriculeE, Date dateCreation,
 			String codeUCrea, Date dateMAJ, String codeUMAJ, Date dateSuppr, String codeUSuppr) {
 		super();
 		this.idNo = idNo;
@@ -123,7 +124,5 @@ public class Note {
 				+ ", dateMAJ=" + dateMAJ + ", codeUMAJ=" + codeUMAJ + ", dateSuppr=" + dateSuppr + ", codeUSuppr="
 				+ codeUSuppr + "]";
 	}
-	
-	
 	
 }

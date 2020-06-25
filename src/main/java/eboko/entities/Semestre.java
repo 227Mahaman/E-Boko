@@ -16,9 +16,9 @@ public class Semestre {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idS;
 	private String codeS;
-	//@JoinColumn(name="Code_N")
-	//@ManyToOne
-	private String codeN;
+	@JoinColumn(name="codeN")
+	@ManyToOne
+	private Niveau codeN;
 	private String intituleS;
 	 // `Choix_S` tinyint(1) DEFAULT '0',
 	private Date dateCreation;
@@ -40,10 +40,11 @@ public class Semestre {
 	public void setCodeS(String codeS) {
 		this.codeS = codeS;
 	}
-	public String getCodeN() {
+	
+	public Niveau getCodeN() {
 		return codeN;
 	}
-	public void setCodeN(String codeN) {
+	public void setCodeN(Niveau codeN) {
 		this.codeN = codeN;
 	}
 	public String getIntituleS() {
@@ -92,7 +93,7 @@ public class Semestre {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Semestre(Long idS, String codeS, String codeN, String intituleS, Date dateCreation, String codeUCrea,
+	public Semestre(Long idS, String codeS, Niveau codeN, String intituleS, Date dateCreation, String codeUCrea,
 			Date dateMAJ, String codeUMAJ, Date dateSuppr, String codeUSuppr) {
 		super();
 		this.idS = idS;

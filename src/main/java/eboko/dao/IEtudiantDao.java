@@ -19,7 +19,7 @@ public interface IEtudiantDao extends JpaRepository<Etudiant, Long> {
 	
 	public Page<Etudiant> findByNomE(String nomE, Pageable p);
 	
-public List<Etudiant> findByNntionaliteE(String nationaliteE);
+	public List<Etudiant> findByNationaliteE(String nationaliteE);
 	
 	public Page<Etudiant> findByNationaliteE(String nationaliteE, Pageable p);
 	

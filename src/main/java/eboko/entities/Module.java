@@ -17,22 +17,22 @@ public class Module {
 	private Long idMo;
 	private String codeMo;
 	private String creditMo;
-	//@JoinColumn(name="Code_A")
-	//@ManyToOne
-	private String codeA;
-	//@JoinColumn(name="Code_F")
-	//@ManyToOne
-	private String codeF;
-	//@JoinColumn(name="Code_N")
-	//@ManyToOne
-	private String codeN;
-	//@JoinColumn(name="Code_UE")
-	//@ManyToOne
-	private String codeUe;
+	@JoinColumn(name="codeA")
+	@ManyToOne
+	private Anneescolaire codeA;
+	@JoinColumn(name="codeF")
+	@ManyToOne
+	private Filiere codeF;
+	@JoinColumn(name="codeN")
+	@ManyToOne
+	private Niveau codeN;
+	@JoinColumn(name="codeUe")
+	@ManyToOne
+	private Ue codeUe;
 	private String codeM;
-	//@JoinColumn(name="Code_S")
-	//@ManyToOne
-	private String codeS;
+	@JoinColumn(name="codeS")
+	@ManyToOne
+	private Semestre codeS;
 	private String choixMo;
 	private Date dateCreation;
 	private String codeUCrea;
@@ -60,30 +60,33 @@ public class Module {
 	public void setCreditMo(String creditMo) {
 		this.creditMo = creditMo;
 	}
-	public String getCodeA() {
+	
+	public Anneescolaire getCodeA() {
 		return codeA;
 	}
-	public void setCodeA(String codeA) {
+	public void setCodeA(Anneescolaire codeA) {
 		this.codeA = codeA;
 	}
-	public String getCodeF() {
+	public Filiere getCodeF() {
 		return codeF;
 	}
-	public void setCodeF(String codeF) {
+	public void setCodeF(Filiere codeF) {
 		this.codeF = codeF;
 	}
-	public String getCodeN() {
+	public Niveau getCodeN() {
 		return codeN;
 	}
-	public void setCodeN(String codeN) {
+	public void setCodeN(Niveau codeN) {
 		this.codeN = codeN;
 	}
-	
-	public String getCodeUe() {
+	public Ue getCodeUe() {
 		return codeUe;
 	}
-	public void setCodeUe(String codeUe) {
+	public void setCodeUe(Ue codeUe) {
 		this.codeUe = codeUe;
+	}
+	public void setCodeS(Semestre codeS) {
+		this.codeS = codeS;
 	}
 	public String getCodeM() {
 		return codeM;
@@ -91,11 +94,9 @@ public class Module {
 	public void setCodeM(String codeM) {
 		this.codeM = codeM;
 	}
-	public String getCodeS() {
+	
+	public Semestre getCodeS() {
 		return codeS;
-	}
-	public void setCodeS(String codeS) {
-		this.codeS = codeS;
 	}
 	public String getChoixMo() {
 		return choixMo;
@@ -143,8 +144,8 @@ public class Module {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Module(Long idMo, String codeMo, String creditMo, String codeA, String codeF, String codeN, String codeUe,
-			String codeM, String codeS, String choixMo, Date dateCreation, String codeUCrea, Date dateMAJ,
+	public Module(Long idMo, String codeMo, String creditMo, Anneescolaire codeA, Filiere codeF, Niveau codeN,
+			Ue codeUe, String codeM, Semestre codeS, String choixMo, Date dateCreation, String codeUCrea, Date dateMAJ,
 			String codeUMAJ, Date dateSuppr, String codeUSuppr) {
 		super();
 		this.idMo = idMo;
@@ -172,6 +173,5 @@ public class Module {
 				+ ", dateMAJ=" + dateMAJ + ", codeUMAJ=" + codeUMAJ + ", dateSuppr=" + dateSuppr + ", codeUSuppr="
 				+ codeUSuppr + "]";
 	}
-	
 	
 }
