@@ -3,12 +3,8 @@ package eboko.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import eboko.dao.IUeDao;
@@ -31,7 +27,7 @@ public class UeController {
 		return ueDao.findAll();
 	}
 	
-	//@RequestMapping("/ue")
+	//@PostMapping("/ue")
 	//public Page<Ue> findAllUe(int page){
 		//return ueDao.findAll(new PageRequest(page, 5));
 	//}
