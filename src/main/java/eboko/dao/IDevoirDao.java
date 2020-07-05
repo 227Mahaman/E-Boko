@@ -13,7 +13,7 @@ import eboko.entities.Devoir;
 public interface IDevoirDao extends JpaRepository<Devoir, Long> {
 
 	@Query("select d from Devoir d where d.codeD like :x")
-	public Page<Devoir> moduleByCodeD(@Param("x")String code, Pageable p);
+	public Page<Devoir> devoirByCodeD(@Param("x")String code, Pageable p);
 	
 	public List<Devoir> findByDateD(String dateD);
 	
