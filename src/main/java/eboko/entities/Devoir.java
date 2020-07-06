@@ -23,9 +23,9 @@ public class Devoir {
 	private String coefD;
 	//IsRemi_D` tinyint(1) DEFAULT '0',
 	private Date dateRemiseD;
-	@JoinColumn(name="codeMo")
+	@JoinColumn(name="idMo")
 	@ManyToOne
-	private Module codeMo;
+	private Module idMo;
 	private String matriculePr;
 	private String nbHeureD;
 	private String heureDebutD;
@@ -93,11 +93,12 @@ public class Devoir {
 	public void setDateRemiseD(Date dateRemiseD) {
 		this.dateRemiseD = dateRemiseD;
 	}
-	public Module getCodeMo() {
-		return codeMo;
+	
+	public Module getIdMo() {
+		return idMo;
 	}
-	public void setCodeMo(Module codeMo) {
-		this.codeMo = codeMo;
+	public void setIdMo(Module idMo) {
+		this.idMo = idMo;
 	}
 	public String getMatriculePr() {
 		return matriculePr;
@@ -194,7 +195,7 @@ public class Devoir {
 		// TODO Auto-generated constructor stub
 	}
 	public Devoir(Long idD, String codeD, String codeNu, Date dateD, String sessionD, String typeD, String coefD,
-			Date dateRemiseD, Module codeMo, String matriculePr, String nbHeureD, String heureDebutD, String periodeD,
+			Date dateRemiseD, Module idMo, String matriculePr, String nbHeureD, String heureDebutD, String periodeD,
 			Date dateAccepterD, String codeUAccepterD, Date dateValiderD, String codeUValiderD, Date dateAnnulerD,
 			String codeUAnnulerD, Date dateCreation, String codeUCrea, Date dateMAJ, String codeUMAJ, Date dateSuppr) {
 		super();
@@ -206,7 +207,7 @@ public class Devoir {
 		this.typeD = typeD;
 		this.coefD = coefD;
 		this.dateRemiseD = dateRemiseD;
-		this.codeMo = codeMo;
+		this.idMo = idMo;
 		this.matriculePr = matriculePr;
 		this.nbHeureD = nbHeureD;
 		this.heureDebutD = heureDebutD;
@@ -226,13 +227,14 @@ public class Devoir {
 	@Override
 	public String toString() {
 		return "Devoir [idD=" + idD + ", codeD=" + codeD + ", codeNu=" + codeNu + ", dateD=" + dateD + ", sessionD="
-				+ sessionD + ", typeD=" + typeD + ", coefD=" + coefD + ", dateRemiseD=" + dateRemiseD + ", codeMo="
-				+ codeMo + ", matriculePr=" + matriculePr + ", nbHeureD=" + nbHeureD + ", heureDebutD=" + heureDebutD
+				+ sessionD + ", typeD=" + typeD + ", coefD=" + coefD + ", dateRemiseD=" + dateRemiseD + ", idMo=" + idMo
+				+ ", matriculePr=" + matriculePr + ", nbHeureD=" + nbHeureD + ", heureDebutD=" + heureDebutD
 				+ ", periodeD=" + periodeD + ", dateAccepterD=" + dateAccepterD + ", codeUAccepterD=" + codeUAccepterD
 				+ ", dateValiderD=" + dateValiderD + ", codeUValiderD=" + codeUValiderD + ", dateAnnulerD="
 				+ dateAnnulerD + ", codeUAnnulerD=" + codeUAnnulerD + ", dateCreation=" + dateCreation + ", codeUCrea="
 				+ codeUCrea + ", dateMAJ=" + dateMAJ + ", codeUMAJ=" + codeUMAJ + ", dateSuppr=" + dateSuppr + "]";
 	}
+	
 	
 	
 }

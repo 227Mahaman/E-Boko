@@ -17,22 +17,22 @@ public class Module {
 	private Long idMo;
 	private String codeMo;
 	private String creditMo;
-	@JoinColumn(name="codeA")
+	@JoinColumn(name="idA")
 	@ManyToOne
-	private Anneescolaire codeA;
-	@JoinColumn(name="codeF")
+	private Anneescolaire idA;
+	@JoinColumn(name="idF")
 	@ManyToOne
-	private Filiere codeF;
-	@JoinColumn(name="codeN")
+	private Filiere idF;
+	@JoinColumn(name="idN")
 	@ManyToOne
-	private Niveau codeN;
-	@JoinColumn(name="codeUe")
+	private Niveau idN;
+	@JoinColumn(name="idUe")
 	@ManyToOne
-	private Ue codeUe;
-	private String codeM;
-	@JoinColumn(name="codeS")
+	private Ue idUe;
+	private String idM;
+	@JoinColumn(name="idS")
 	@ManyToOne
-	private Semestre codeS;
+	private Semestre idS;
 	private String choixMo;
 	private Date dateCreation;
 	private String codeUCrea;
@@ -61,42 +61,41 @@ public class Module {
 		this.creditMo = creditMo;
 	}
 	
-	public Anneescolaire getCodeA() {
-		return codeA;
+	public Anneescolaire getIdA() {
+		return idA;
 	}
-	public void setCodeA(Anneescolaire codeA) {
-		this.codeA = codeA;
+	public void setIdA(Anneescolaire idA) {
+		this.idA = idA;
 	}
-	public Filiere getCodeF() {
-		return codeF;
+	public Filiere getIdF() {
+		return idF;
 	}
-	public void setCodeF(Filiere codeF) {
-		this.codeF = codeF;
+	public void setIdF(Filiere idF) {
+		this.idF = idF;
 	}
-	public Niveau getCodeN() {
-		return codeN;
+	public Niveau getIdN() {
+		return idN;
 	}
-	public void setCodeN(Niveau codeN) {
-		this.codeN = codeN;
+	public void setIdN(Niveau idN) {
+		this.idN = idN;
 	}
-	public Ue getCodeUe() {
-		return codeUe;
+	public Ue getIdUe() {
+		return idUe;
 	}
-	public void setCodeUe(Ue codeUe) {
-		this.codeUe = codeUe;
+	public void setIdUe(Ue idUe) {
+		this.idUe = idUe;
 	}
-	public void setCodeS(Semestre codeS) {
-		this.codeS = codeS;
+	public String getIdM() {
+		return idM;
 	}
-	public String getCodeM() {
-		return codeM;
+	public void setIdM(String idM) {
+		this.idM = idM;
 	}
-	public void setCodeM(String codeM) {
-		this.codeM = codeM;
+	public Semestre getIdS() {
+		return idS;
 	}
-	
-	public Semestre getCodeS() {
-		return codeS;
+	public void setIdS(Semestre idS) {
+		this.idS = idS;
 	}
 	public String getChoixMo() {
 		return choixMo;
@@ -144,19 +143,19 @@ public class Module {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Module(Long idMo, String codeMo, String creditMo, Anneescolaire codeA, Filiere codeF, Niveau codeN,
-			Ue codeUe, String codeM, Semestre codeS, String choixMo, Date dateCreation, String codeUCrea, Date dateMAJ,
+	public Module(Long idMo, String codeMo, String creditMo, Anneescolaire idA, Filiere idF, Niveau idN, Ue idUe,
+			String idM, Semestre idS, String choixMo, Date dateCreation, String codeUCrea, Date dateMAJ,
 			String codeUMAJ, Date dateSuppr, String codeUSuppr) {
 		super();
 		this.idMo = idMo;
 		this.codeMo = codeMo;
 		this.creditMo = creditMo;
-		this.codeA = codeA;
-		this.codeF = codeF;
-		this.codeN = codeN;
-		this.codeUe = codeUe;
-		this.codeM = codeM;
-		this.codeS = codeS;
+		this.idA = idA;
+		this.idF = idF;
+		this.idN = idN;
+		this.idUe = idUe;
+		this.idM = idM;
+		this.idS = idS;
 		this.choixMo = choixMo;
 		this.dateCreation = dateCreation;
 		this.codeUCrea = codeUCrea;
@@ -167,11 +166,11 @@ public class Module {
 	}
 	@Override
 	public String toString() {
-		return "Module [idMo=" + idMo + ", codeMo=" + codeMo + ", creditMo=" + creditMo + ", codeA=" + codeA
-				+ ", codeF=" + codeF + ", codeN=" + codeN + ", codeUe=" + codeUe + ", codeM=" + codeM + ", codeS="
-				+ codeS + ", choixMo=" + choixMo + ", dateCreation=" + dateCreation + ", codeUCrea=" + codeUCrea
-				+ ", dateMAJ=" + dateMAJ + ", codeUMAJ=" + codeUMAJ + ", dateSuppr=" + dateSuppr + ", codeUSuppr="
-				+ codeUSuppr + "]";
+		return "Module [idMo=" + idMo + ", codeMo=" + codeMo + ", creditMo=" + creditMo + ", idA=" + idA + ", idF="
+				+ idF + ", idN=" + idN + ", idUe=" + idUe + ", idM=" + idM + ", idS=" + idS + ", choixMo=" + choixMo
+				+ ", dateCreation=" + dateCreation + ", codeUCrea=" + codeUCrea + ", dateMAJ=" + dateMAJ + ", codeUMAJ="
+				+ codeUMAJ + ", dateSuppr=" + dateSuppr + ", codeUSuppr=" + codeUSuppr + "]";
 	}
+	
 	
 }

@@ -16,9 +16,9 @@ public class Semestre {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idS;
 	private String codeS;
-	@JoinColumn(name="codeN")
+	@JoinColumn(name="idN")
 	@ManyToOne
-	private Niveau codeN;
+	private Niveau idN;
 	private String intituleS;
 	 // `Choix_S` tinyint(1) DEFAULT '0',
 	private Date dateCreation;
@@ -41,11 +41,11 @@ public class Semestre {
 		this.codeS = codeS;
 	}
 	
-	public Niveau getCodeN() {
-		return codeN;
+	public Niveau getIdN() {
+		return idN;
 	}
-	public void setCodeN(Niveau codeN) {
-		this.codeN = codeN;
+	public void setIdN(Niveau idN) {
+		this.idN = idN;
 	}
 	public String getIntituleS() {
 		return intituleS;
@@ -93,12 +93,12 @@ public class Semestre {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Semestre(Long idS, String codeS, Niveau codeN, String intituleS, Date dateCreation, String codeUCrea,
+	public Semestre(Long idS, String codeS, Niveau idN, String intituleS, Date dateCreation, String codeUCrea,
 			Date dateMAJ, String codeUMAJ, Date dateSuppr, String codeUSuppr) {
 		super();
 		this.idS = idS;
 		this.codeS = codeS;
-		this.codeN = codeN;
+		this.idN = idN;
 		this.intituleS = intituleS;
 		this.dateCreation = dateCreation;
 		this.codeUCrea = codeUCrea;
@@ -109,10 +109,9 @@ public class Semestre {
 	}
 	@Override
 	public String toString() {
-		return "Semestre [idS=" + idS + ", codeS=" + codeS + ", codeN=" + codeN + ", intituleS=" + intituleS
+		return "Semestre [idS=" + idS + ", codeS=" + codeS + ", idN=" + idN + ", intituleS=" + intituleS
 				+ ", dateCreation=" + dateCreation + ", codeUCrea=" + codeUCrea + ", dateMAJ=" + dateMAJ + ", codeUMAJ="
 				+ codeUMAJ + ", dateSuppr=" + dateSuppr + ", codeUSuppr=" + codeUSuppr + "]";
 	}
-	
 	
 }

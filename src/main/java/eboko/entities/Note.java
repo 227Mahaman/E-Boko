@@ -17,12 +17,12 @@ public class Note {
 	private Long idNo;
 	private String codeNo;
 	private String valeurNo;
-	@JoinColumn(name="codeD")
+	@JoinColumn(name="idD")
 	@ManyToOne
-	private Devoir codeD;
-	@JoinColumn(name="matriculeE")
+	private Devoir idD;
+	@JoinColumn(name="idE")
 	@ManyToOne
-	private Etudiant matriculeE;
+	private Etudiant idE;
 	//Choix_No` tinyint(1) DEFAULT '0',
 	private Date dateCreation;
 	private String codeUCrea;
@@ -50,17 +50,17 @@ public class Note {
 		this.valeurNo = valeurNo;
 	}
 	
-	public Devoir getCodeD() {
-		return codeD;
+	public Devoir getIdD() {
+		return idD;
 	}
-	public void setCodeD(Devoir codeD) {
-		this.codeD = codeD;
+	public void setIdD(Devoir idD) {
+		this.idD = idD;
 	}
-	public Etudiant getMatriculeE() {
-		return matriculeE;
+	public Etudiant getIdE() {
+		return idE;
 	}
-	public void setMatriculeE(Etudiant matriculeE) {
-		this.matriculeE = matriculeE;
+	public void setIdE(Etudiant idE) {
+		this.idE = idE;
 	}
 	public Date getDateCreation() {
 		return dateCreation;
@@ -102,14 +102,14 @@ public class Note {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Note(Long idNo, String codeNo, String valeurNo, Devoir codeD, Etudiant matriculeE, Date dateCreation,
+	public Note(Long idNo, String codeNo, String valeurNo, Devoir idD, Etudiant idE, Date dateCreation,
 			String codeUCrea, Date dateMAJ, String codeUMAJ, Date dateSuppr, String codeUSuppr) {
 		super();
 		this.idNo = idNo;
 		this.codeNo = codeNo;
 		this.valeurNo = valeurNo;
-		this.codeD = codeD;
-		this.matriculeE = matriculeE;
+		this.idD = idD;
+		this.idE = idE;
 		this.dateCreation = dateCreation;
 		this.codeUCrea = codeUCrea;
 		this.dateMAJ = dateMAJ;
@@ -119,10 +119,11 @@ public class Note {
 	}
 	@Override
 	public String toString() {
-		return "Note [idNo=" + idNo + ", codeNo=" + codeNo + ", valeurNo=" + valeurNo + ", codeD=" + codeD
-				+ ", matriculeE=" + matriculeE + ", dateCreation=" + dateCreation + ", codeUCrea=" + codeUCrea
-				+ ", dateMAJ=" + dateMAJ + ", codeUMAJ=" + codeUMAJ + ", dateSuppr=" + dateSuppr + ", codeUSuppr="
-				+ codeUSuppr + "]";
+		return "Note [idNo=" + idNo + ", codeNo=" + codeNo + ", valeurNo=" + valeurNo + ", idD=" + idD + ", idE=" + idE
+				+ ", dateCreation=" + dateCreation + ", codeUCrea=" + codeUCrea + ", dateMAJ=" + dateMAJ + ", codeUMAJ="
+				+ codeUMAJ + ", dateSuppr=" + dateSuppr + ", codeUSuppr=" + codeUSuppr + "]";
 	}
+	
+	
 	
 }

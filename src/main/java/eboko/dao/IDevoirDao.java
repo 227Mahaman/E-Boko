@@ -33,6 +33,6 @@ public interface IDevoirDao extends JpaRepository<Devoir, Long> {
 	@Query("select d from Devoir d where d.codeNu like :x")
 	public Page<Devoir> moduleByCodeNu(@Param("x")String code, Pageable p);
 	
-	@Query("select d from Devoir d where d.codeMo like :x")
-	public Page<Devoir> moduleByCodeMo(@Param("x")String code, Pageable p);
+	@Query("select d from Devoir d where d.idMo like :x")
+	public Page<Devoir> moduleByIdMo(@Param("x")Integer idMo, Pageable p);
 }

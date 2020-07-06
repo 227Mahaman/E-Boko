@@ -22,6 +22,6 @@ public interface ISemestreDao extends JpaRepository<Semestre, Long> {
 	@Query("select s from Semestre s")
 	public List<Semestre> findAll();
 	
-	@Query("select s from Semestre s where s.codeN like :x")
-	public Page<Semestre> semestreByCodeN(@Param("x")String code, Pageable p);
+	@Query("select s from Semestre s where s.idN like :x")
+	public Page<Semestre> semestreByidN(@Param("x")Integer idN, Pageable p);
 }

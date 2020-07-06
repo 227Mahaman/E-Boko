@@ -15,17 +15,18 @@ public class Inscription {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idI;
+	private String codeI;
 	private Date dateI;
-	@JoinColumn(name="codeA")
+	@JoinColumn(name="idA")
 	@ManyToOne
-	private Anneescolaire codeA;
-	@JoinColumn(name="codeF")
+	private Anneescolaire idA;
+	@JoinColumn(name="idF")
 	@ManyToOne
-	private Filiere codeF;
-	@JoinColumn(name="codeN")
+	private Filiere idF;
+	@JoinColumn(name="idN")
 	@ManyToOne
-	private Niveau codeN;
-	private String codeNu;
+	private Niveau idN;
+	private String idNu;
 	private String matriculeE;
 	private Date dateCreation;
 	private String codeUCrea;
@@ -39,35 +40,43 @@ public class Inscription {
 	public void setIdI(Long idI) {
 		this.idI = idI;
 	}
+	
+	public String getCodeI() {
+		return codeI;
+	}
+	public void setCodeI(String codeI) {
+		this.codeI = codeI;
+	}
 	public Date getDateI() {
 		return dateI;
 	}
 	public void setDateI(Date dateI) {
 		this.dateI = dateI;
 	}
-	public Anneescolaire getCodeA() {
-		return codeA;
+	
+	public Anneescolaire getIdA() {
+		return idA;
 	}
-	public void setCodeA(Anneescolaire codeA) {
-		this.codeA = codeA;
+	public void setIdA(Anneescolaire idA) {
+		this.idA = idA;
 	}
-	public Filiere getCodeF() {
-		return codeF;
+	public Filiere getIdF() {
+		return idF;
 	}
-	public void setCodeF(Filiere codeF) {
-		this.codeF = codeF;
+	public void setIdF(Filiere idF) {
+		this.idF = idF;
 	}
-	public Niveau getCodeN() {
-		return codeN;
+	public Niveau getIdN() {
+		return idN;
 	}
-	public void setCodeN(Niveau codeN) {
-		this.codeN = codeN;
+	public void setIdN(Niveau idN) {
+		this.idN = idN;
 	}
-	public String getCodeNu() {
-		return codeNu;
+	public String getIdNu() {
+		return idNu;
 	}
-	public void setCodeNu(String codeNu) {
-		this.codeNu = codeNu;
+	public void setIdNu(String idNu) {
+		this.idNu = idNu;
 	}
 	public String getMatriculeE() {
 		return matriculeE;
@@ -115,16 +124,17 @@ public class Inscription {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Inscription(Long idI, Date dateI, Anneescolaire codeA, Filiere codeF, Niveau codeN, String codeNu,
+	public Inscription(Long idI, String codeI, Date dateI, Anneescolaire idA, Filiere idF, Niveau idN, String idNu,
 			String matriculeE, Date dateCreation, String codeUCrea, Date dateMAJ, String codeUMAJ, Date dateSuppr,
 			String codeUSuppr) {
 		super();
 		this.idI = idI;
+		this.codeI = codeI;
 		this.dateI = dateI;
-		this.codeA = codeA;
-		this.codeF = codeF;
-		this.codeN = codeN;
-		this.codeNu = codeNu;
+		this.idA = idA;
+		this.idF = idF;
+		this.idN = idN;
+		this.idNu = idNu;
 		this.matriculeE = matriculeE;
 		this.dateCreation = dateCreation;
 		this.codeUCrea = codeUCrea;
@@ -135,11 +145,9 @@ public class Inscription {
 	}
 	@Override
 	public String toString() {
-		return "Inscription [idI=" + idI + ", dateI=" + dateI + ", codeA=" + codeA + ", codeF=" + codeF + ", codeN="
-				+ codeN + ", codeNu=" + codeNu + ", matriculeE=" + matriculeE + ", dateCreation=" + dateCreation
+		return "Inscription [idI=" + idI + ", codeI=" + codeI + ", dateI=" + dateI + ", idA=" + idA + ", idF=" + idF
+				+ ", idN=" + idN + ", idNu=" + idNu + ", matriculeE=" + matriculeE + ", dateCreation=" + dateCreation
 				+ ", codeUCrea=" + codeUCrea + ", dateMAJ=" + dateMAJ + ", codeUMAJ=" + codeUMAJ + ", dateSuppr="
 				+ dateSuppr + ", codeUSuppr=" + codeUSuppr + "]";
 	}
-	
-	
 }

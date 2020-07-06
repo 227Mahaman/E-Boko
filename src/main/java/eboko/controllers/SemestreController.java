@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,12 +28,12 @@ public class SemestreController {
 		return semestre;
 	}
 	
-	@PostMapping("/all")
+	@RequestMapping("/all")
 	public List<Semestre> findAllSemestre(){
 		return semestreDao.findAll();
 	}
 	
-	@PostMapping("/get")
+	@RequestMapping("/get")
 	public Semestre getSemestre(Long id) {
 		return semestreDao.findById(id).orElse(null);
 	}
@@ -40,5 +42,10 @@ public class SemestreController {
 	public Semestre update(@RequestBody Semestre semestre) {
 		semestreDao.saveAndFlush(semestre);
 		return semestre;
+	}
+	
+	@DeleteMapping("/{id}")
+	public void delete(@PathVariable Long id) {
+		semestreDao.deleteById(id);
 	}
 }

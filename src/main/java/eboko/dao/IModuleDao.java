@@ -22,18 +22,18 @@ public interface IModuleDao extends JpaRepository<Module, Long> {
 	@Query("select m from Module m")
 	public List<Module> findAll();
 	
-	@Query("select m from Module m where m.codeA like :x")
-	public Page<Module> moduleByCodeA(@Param("x")String code, Pageable p);
+	@Query("select m from Module m where m.idA like :x")
+	public Page<Module> moduleByIdA(@Param("x")Integer idA, Pageable p);
 	
-	@Query("select m from Module m where m.codeF like :x")
-	public Page<Module> moduleByCodeF(@Param("x")String code, Pageable p);
+	@Query("select m from Module m where m.idF like :x")
+	public Page<Module> moduleByIdF(@Param("x")Integer idF, Pageable p);
 	
-	@Query("select m from Module m where m.codeN like :x")
-	public Page<Module> moduleByCodeN(@Param("x")String code, Pageable p);
+	@Query("select m from Module m where m.idN like :x")
+	public Page<Module> moduleByIdN(@Param("x")Integer idN, Pageable p);
 	
-	@Query("select m from Module m where m.codeUe like :x")
-	public Page<Module> moduleByCodeUe(@Param("x")String code, Pageable p);
+	@Query("select m from Module m where m.idUe like :x")
+	public Page<Module> moduleByIdUe(@Param("x")Integer idUe, Pageable p);
 	
-	@Query("select m from Module m where m.codeM like :x")
-	public Page<Module> moduleByCodeM(@Param("x")String code, Pageable p);
+	@Query("select m from Module m where m.idM like :x")
+	public Page<Module> moduleByIdM(@Param("x")String idM, Pageable p);
 }

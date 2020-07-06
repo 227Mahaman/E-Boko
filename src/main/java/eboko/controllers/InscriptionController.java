@@ -51,7 +51,7 @@ public class InscriptionController {
 	}
 	
 	@RequestMapping("/matricule")
-	public Inscription findInscriptionByMatricule(String matricule) {
-		return inscriptionDao.findByMatriculeE(matricule).get(0);
+	public Inscription findInscriptionByMatricule(String matriculeE) {
+		return inscriptionDao.findByMatriculeE(matriculeE).get(0);
 	}
 }

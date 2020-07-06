@@ -15,6 +15,9 @@ public interface IInscriptionDao extends JpaRepository<Inscription, Long> {
 	@Query("select i from Inscription i where i.matriculeE like :x")
 	public Page<Inscription> inscriptionByMatricule(@Param("x")String matricule, Pageable p);
 	
+	@Query("select i from Inscription i where i.codeI like :x")
+	public Page<Inscription> inscriptionByCodeI(@Param("x")String code, Pageable p);
+	
 	public List<Inscription> findByMatriculeE(String matriculeE);
 	
 	public Page<Inscription> findByMatriculeE(String matriculeE, Pageable p);

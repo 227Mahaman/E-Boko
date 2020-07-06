@@ -18,6 +18,6 @@ public interface INoteDao extends JpaRepository<Note, Long> {
 	@Query("select n from Note n")
 	public List<Note> findAll();
 	
-	@Query("select n from Note n where n.matriculeE like :x")
-	public Page<Note> noteByMatriculeE(@Param("x")String matricule, Pageable p);
+	@Query("select n from Note n where n.idE like :x")
+	public Page<Note> noteByidE(@Param("x")Integer idE, Pageable p);
 }

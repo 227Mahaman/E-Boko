@@ -26,6 +26,6 @@ public interface ISessionDao extends JpaRepository<Session, Long> {
 	@Query("select s from Session s")
 	public List<Session> findAll();
 	
-	@Query("select s from Session s where s.codeU like :x")
-	public Page<Session> sessionByCodeU(@Param("x")String code, Pageable p);
+	@Query("select s from Session s where s.idUe like :x")
+	public Page<Session> sessionByIdUe(@Param("x")Integer idUe, Pageable p);
 }
