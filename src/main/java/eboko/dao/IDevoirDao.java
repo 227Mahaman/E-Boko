@@ -9,6 +9,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import eboko.entities.Devoir;
+import eboko.entities.Module;;
 
 public interface IDevoirDao extends JpaRepository<Devoir, Long> {
 
@@ -35,4 +36,8 @@ public interface IDevoirDao extends JpaRepository<Devoir, Long> {
 	
 	@Query("select d from Devoir d where d.idMo like :x")
 	public Page<Devoir> moduleByIdMo(@Param("x")Integer idMo, Pageable p);
+	
+	//select * from devoir d, module m, filiere f, inscription i, etudiant e where d.id_mo=m.id_mo and m.idf=f.idf and f.idf=i.idf and i.matriculee=e.matriculee and e.ide=1 
+	@Query("select d from Devoir d, Module m, Filiere f, Inscription i, Etudiant e where d.idMo=m.idMo and m.idF=f.idF and f.idF=i.idF and i.matriculeE=e.matriculeE and e.idE like :x")
+	public List<Devoir> devoirByIdE(@Param("x")Long idE);
 }

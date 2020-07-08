@@ -1,10 +1,12 @@
 package eboko.controllers;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -13,6 +15,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import eboko.dao.IDevoirDao;
 import eboko.entities.Devoir;
+import eboko.entities.Filiere;
+import eboko.entities.Note;
 
 @RestController
 @RequestMapping("/devoir")
@@ -47,5 +51,10 @@ public class DevoirController {
 	@DeleteMapping("/{id}")
 	public void delete(@PathVariable Long id) {
 		devoirDao.deleteById(id);
+	}
+	
+	@GetMapping("/byEtudiant/{idE}")
+	public List<Devoir> mesDevoirs(@PathVariable Long idE){
+		return devoirDao.devoirByIdE(idE);
 	}
 }
