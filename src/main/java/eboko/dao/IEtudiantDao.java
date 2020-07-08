@@ -15,6 +15,8 @@ public interface IEtudiantDao extends JpaRepository<Etudiant, Long> {
 	@Query("select e from Etudiant e where e.matriculeE like :x")
 	public Page<Etudiant> filiereByMatriculeE(@Param("x")String matricule, Pageable p);
 	
+	public List<Etudiant> findByIdE(Long idE);
+	
 	public List<Etudiant> findByNomE(String nomE);
 	
 	public Page<Etudiant> findByNomE(String nomE, Pageable p);
